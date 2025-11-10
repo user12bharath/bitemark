@@ -1,0 +1,39 @@
+# Required Python Packages for Bite Mark Classification Pipeline
+
+# Deep Learning Framework
+tensorflow==2.10.0
+tensorflow-gpu==2.10.0  # GPU support
+
+# Numerical Computing
+numpy>=1.23.0,<2.0.0  # TensorFlow 2.10 requires NumPy 1.x
+scipy>=1.9.0
+
+# Image Processing
+opencv-python==4.8.1.78  # Last version compatible with NumPy 1.x
+Pillow>=9.2.0
+
+# Data Science & ML
+scikit-learn>=1.1.0
+pandas>=1.5.0
+
+# Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Progress Bars
+tqdm>=4.64.0
+
+# Configuration
+pyyaml>=6.0
+
+# Jupyter Support (optional)
+jupyter>=1.0.0
+ipykernel>=6.15.0
+
+# Development Tools (optional)
+black>=22.8.0
+pylint>=2.15.0
+
+# Note: For 4GB GPU optimization
+# - Mixed precision (FP16) is handled by TensorFlow 2.10+
+# - No additional packages needed for GPU memory optimization

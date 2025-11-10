@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-07T14:30:45",
+    "model_path": "models/balanced_model.h5",
+    "training_mode": "balanced_with_class_weights",
+    "class_names": ["human", "dog", "snake"],
+    "seed": 42
+  },
+  "dataset_info": {
+    "raw_counts": {
+      "human": 24,
+      "dog": 3,
+      "snake": 35,
+      "total": 62
+    },
+    "augmented_counts": {
+      "human": 153,
+      "dog": 153,
+      "snake": 153,
+      "total": 459
+    },
+    "train_val_test_split": {
+      "train": 321,
+      "val": 46,
+      "test": 13
+    },
+    "class_weights": {
+      "human": 0.87,
+      "dog": 4.33,
+      "snake": 0.62
+    }
+  },
+  "training_config": {
+    "epochs_trained": 45,
+    "early_stopped_at": 45,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "model_architecture": "MobileNetV2",
+    "optimizer": "adam",
+    "loss": "sparse_categorical_crossentropy"
+  },
+  "overall_metrics": {
+    "test_accuracy": 0.7692,
+    "test_loss": 0.5234,
+    "macro_avg_precision": 0.7500,
+    "macro_avg_recall": 0.7333,
+    "macro_avg_f1": 0.7400,
+    "weighted_avg_precision": 0.7650,
+    "weighted_avg_recall": 0.7692,
+    "weighted_avg_f1": 0.7620
+  },
+  "per_class_metrics": {
+    "human": {
+      "precision": 0.8000,
+      "recall": 0.8000,
+      "f1_score": 0.8000,
+      "support": 5,
+      "tp": 4,
+      "fp": 1,
+      "fn": 1,
+      "tn": 7
+    },
+    "dog": {
+      "precision": 1.0000,
+      "recall": 1.0000,
+      "f1_score": 1.0000,
+      "support": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 12
+    },
+    "snake": {
+      "precision": 0.7143,
+      "recall": 0.7143,
+      "f1_score": 0.7143,
+      "support": 7,
+      "tp": 5,
+      "fp": 2,
+      "fn": 2,
+      "tn": 4
+    }
+  },
+  "confusion_matrix": {
+    "matrix": [
+      [4, 0, 1],
+      [0, 1, 0],
+      [1, 0, 5]
+    ],
+    "labels": ["human", "dog", "snake"]
+  },
+  "training_history": {
+    "epochs": [1, 2, 3, "...", 44, 45],
+    "train_loss": [1.2345, 0.9876, 0.7543, "...", 0.2156, 0.2098],
+    "train_accuracy": [0.45, 0.58, 0.67, "...", 0.92, 0.93],
+    "val_loss": [1.1234, 0.8765, 0.6543, "...", 0.4987, 0.5234],
+    "val_accuracy": [0.50, 0.61, 0.72, "...", 0.78, 0.77]
+  },
+  "comparison_with_baseline": {
+    "baseline_model": "models/best_model.h5",
+    "baseline_accuracy": 0.5385,
+    "balanced_accuracy": 0.7692,
+    "improvement": "+42.8%",
+    "baseline_per_class": {
+      "human": {"precision": 0.0, "recall": 0.0, "f1_score": 0.0},
+      "dog": {"precision": 0.0, "recall": 0.0, "f1_score": 0.0},
+      "snake": {"precision": 0.5385, "recall": 1.0, "f1_score": 0.70}
+    },
+    "balanced_per_class": {
+      "human": {"precision": 0.80, "recall": 0.80, "f1_score": 0.80},
+      "dog": {"precision": 1.00, "recall": 1.00, "f1_score": 1.00},
+      "snake": {"precision": 0.71, "recall": 0.71, "f1_score": 0.71}
+    }
+  },
+  "recommendations": [
+    "Model shows significant improvement on minority classes (human: 0% → 80%, dog: 0% → 100%)",
+    "Consider collecting more dog images (currently only 3) for better generalization",
+    "Test set is small (13 images) - use cross-validation for more robust evaluation",
+    "Monitor for overfitting on dog class (perfect score may indicate memorization)",
+    "Try increasing augmentation factor to 5-7 if more diversity is needed"
+  ]
+}

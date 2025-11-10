@@ -1,0 +1,43 @@
+{
+    "test_accuracy": 0.7692307829856873,
+    "test_loss": 0.6545594930648804,
+    "f1_macro": 0.5341880341880342,
+    "f1_weighted": 0.7445759368836293,
+    "classification_report": "              precision    recall  f1-score   support\n\n       human      0.625     1.000     0.769         5\n         dog      0.000     0.000     0.000         1\n       snake      1.000     0.714     0.833         7\n\n    accuracy                          0.769        13\n   macro avg      0.542     0.571     0.534        13\nweighted avg      0.779     0.769     0.745        13\n",
+    "confusion_matrix": [
+        [
+            5,
+            0,
+            0
+        ],
+        [
+            1,
+            0,
+            0
+        ],
+        [
+            2,
+            0,
+            5
+        ]
+    ],
+    "confusion_matrix_str": "[[5 0 0]\n [1 0 0]\n [2 0 5]]",
+    "total_samples": 62,
+    "train_samples": 207,
+    "val_samples": 10,
+    "test_samples": 13,
+    "classes": [
+        "human",
+        "dog",
+        "snake"
+    ],
+    "image_size": [
+        224,
+        224
+    ],
+    "batch_size": 8,
+    "optimizer": "Adam",
+    "learning_rate": 0.0005,
+    "gpu_used": "No",
+    "gpu_model": "CPU"
+}
