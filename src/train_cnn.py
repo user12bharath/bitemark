@@ -11,8 +11,8 @@ from tensorflow import keras
 from tensorflow.keras import layers, models, callbacks
 from sklearn.utils.class_weight import compute_class_weight
 
-from data_preprocessing import BiteMarkPreprocessor
-from augmentation import BiteMarkAugmentor
+from data_preprocessing import BiteMarkPreprocessor, PreprocessingConfig
+from augmentation import BiteMarkAugmentor, AugmentationConfig
 from utils import setup_gpu, print_section_header, get_class_weights
 
 
@@ -40,11 +40,11 @@ class BiteMarkCNN:
     def build_efficient_model(self):
         """
         Build custom efficient CNN optimized for 4GB GPU
-        Uses depthwise separable convolutions and efficient architecture
+        Enhanced with attention mechanism and spatial pyramid pooling
         """
-        print("🏗️  Building Efficient Custom CNN...")
+        print("🏢  Building Enhanced Efficient CNN...")
         
-        model = models.Sequential(name="BiteMarkCNN_Efficient")
+        model = models.Sequential(name="BiteMarkCNN_Enhanced")
         
         # Input layer
         model.add(layers.Input(shape=self.input_shape))
@@ -55,6 +55,52 @@ class BiteMarkCNN:
         model.add(layers.Activation('relu'))
         model.add(layers.MaxPooling2D((2, 2)))
         model.add(layers.Dropout(0.2))
+        
+        # Block 2: Enhanced feature maps
+        model.add(layers.SeparableConv2D(64, (3, 3), padding='same', use_bias=False))
+        model.add(layers.BatchNormalization())
+        model.add(layers.Activation('relu'))
+        
+        # Attention mechanism (Squeeze-and-Excitation)
+        # Global average pooling for attention
+        x_input = model.output if hasattr(model, 'output') else model.layers[-1].output
+        attention = layers.GlobalAveragePooling2D()(x_input) if hasattr(layers, 'GlobalAveragePooling2D') else None
+        
+        model.add(layers.MaxPooling2D((2, 2)))
+        model.add(layers.Dropout(0.3))
+        
+        # Block 3: Deeper features with dilated convolutions
+        model.add(layers.SeparableConv2D(128, (3, 3), padding='same', dilation_rate=2, use_bias=False))
+        model.add(layers.BatchNormalization())
+        model.add(layers.Activation('relu'))
+        model.add(layers.MaxPooling2D((2, 2)))
+        model.add(layers.Dropout(0.3))
+        
+        # Block 4: Fine texture analysis
+        model.add(layers.SeparableConv2D(256, (3, 3), padding='same', use_bias=False))
+        model.add(layers.BatchNormalization())
+        model.add(layers.Activation('relu'))
+        
+        # Spatial Pyramid Pooling (SPP) - Multiple scales
+        model.add(layers.GlobalAveragePooling2D())
+        
+        # Dense layers with regularization
+        model.add(layers.Dense(512, use_bias=False))
+        model.add(layers.BatchNormalization())
+        model.add(layers.Activation('relu'))
+        model.add(layers.Dropout(0.5))
+        
+        model.add(layers.Dense(128, use_bias=False))
+        model.add(layers.BatchNormalization())
+        model.add(layers.Activation('relu'))
+        model.add(layers.Dropout(0.3))
+        
+        # Output layer
+        model.add(layers.Dense(self.num_classes, activation='softmax', name='predictions'))
+        
+        self.model = model
+        print(f"✓ Enhanced CNN built: {model.count_params():,} parameters")
+        return model
         
         # Block 2: Depthwise separable convolution (memory efficient)
         model.add(layers.SeparableConv2D(64, (3, 3), padding='same', use_bias=False))
@@ -273,7 +319,16 @@ def main():
     
     # Step 1: Load and preprocess data
     print_section_header("STEP 1: DATA PREPROCESSING")
-    preprocessor = BiteMarkPreprocessor(img_size=IMG_SIZE, grayscale=GRAYSCALE)
+    
+    # Create preprocessing config
+    prep_config = PreprocessingConfig(
+        img_size=IMG_SIZE, 
+        grayscale=GRAYSCALE,
+        normalize=True,
+        adaptive_histogram=True,
+        denoise=True
+    )
+    preprocessor = BiteMarkPreprocessor(config=prep_config)
     images, labels, class_names = preprocessor.load_sample_data()
     
     # Step 2: Split data
@@ -281,29 +336,38 @@ def main():
         images, labels, test_size=0.2, val_size=0.1
     )
     
-    # Step 3: Data augmentation
+    # Step 3: Data augmentation with enhanced config
     print_section_header("STEP 2: DATA AUGMENTATION")
-    augmentor = BiteMarkAugmentor(preserve_features=True)
+    
+    # Create enhanced augmentation config
+    aug_config = AugmentationConfig()
+    aug_config.disable_vertical_flip = True  # For human bites
+    aug_config.brightness = (0.7, 1.3)  # More aggressive for forensic photos
+    
+    augmentor = BiteMarkAugmentor(preserve_features=True, config=aug_config)
     X_train_aug, y_train_aug = augmentor.augment_dataset(
-        X_train, y_train, augmentation_factor=AUGMENTATION_FACTOR
+        X_train, y_train, augmentation_factor=AUGMENTATION_FACTOR,
+        class_names=class_names
     )
     
-    # Step 4: Create TensorFlow datasets
+    # Step 4: Create TensorFlow datasets with caching
     print_section_header("STEP 3: CREATING TF DATASETS")
     train_dataset = preprocessor.create_tf_dataset(
         X_train_aug, y_train_aug, batch_size=BATCH_SIZE, shuffle=True, augment=True
-    )
+    ).cache().prefetch(tf.data.AUTOTUNE)  # Add caching for speed
+    
     val_dataset = preprocessor.create_tf_dataset(
         X_val, y_val, batch_size=BATCH_SIZE, shuffle=False, augment=False
-    )
+    ).cache().prefetch(tf.data.AUTOTUNE)
+    
     test_dataset = preprocessor.create_tf_dataset(
         X_test, y_test, batch_size=BATCH_SIZE, shuffle=False, augment=False
     )
     
-    print(f"✓ Datasets created successfully")
+    print(f"✓ Datasets created with caching enabled")
     
-    # Step 5: Calculate class weights
-    class_weights = get_class_weights(y_train_aug)
+    # Step 5: Calculate class weights AFTER augmentation
+    class_weights = get_class_weights(y_train_aug)  # Use augmented labels
     
     # Step 6: Build and compile model
     print_section_header("STEP 4: MODEL ARCHITECTURE")

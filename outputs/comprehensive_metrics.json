@@ -1,0 +1,137 @@
+{
+  "auc_macro": 0.9774531024531026,
+  "auc_micro": 0.9848,
+  "best_val_accuracy": 0.9473684430122375,
+  "class_weights_used": true,
+  "classification_report": {
+    "accuracy": 0.96,
+    "dog": {
+      "f1-score": 0.6666666666666666,
+      "precision": 0.5,
+      "recall": 1.0,
+      "support": 1.0
+    },
+    "human": {
+      "f1-score": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 10.0
+    },
+    "macro avg": {
+      "f1-score": 0.8765432098765431,
+      "precision": 0.8333333333333334,
+      "recall": 0.9761904761904763,
+      "support": 25.0
+    },
+    "snake": {
+      "f1-score": 0.9629629629629629,
+      "precision": 1.0,
+      "recall": 0.9285714285714286,
+      "support": 14.0
+    },
+    "weighted avg": {
+      "f1-score": 0.9659259259259259,
+      "precision": 0.98,
+      "recall": 0.96,
+      "support": 25.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      10,
+      0
+    ],
+    [
+      1,
+      0,
+      13
+    ]
+  ],
+  "f1_macro": 0.8765432098765431,
+  "f1_micro": 0.96,
+  "f1_weighted": 0.9659259259259259,
+  "final_train_accuracy": 1.0,
+  "final_val_accuracy": 0.8947368264198303,
+  "gpu_used": false,
+  "mixed_precision_used": true,
+  "normalized_confusion_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.07142857142857142,
+      0.0,
+      0.9285714285714286
+    ]
+  ],
+  "per_class_accuracy": {
+    "dog": 1.0,
+    "human": 1.0,
+    "snake": 0.9285714285714286
+  },
+  "per_class_metrics": {
+    "dog": {
+      "f1_score": 0.6666666666666666,
+      "precision": 0.5,
+      "recall": 1.0
+    },
+    "human": {
+      "f1_score": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "snake": {
+      "f1_score": 0.9629629629629629,
+      "precision": 1.0,
+      "recall": 0.9285714285714286
+    }
+  },
+  "pipeline_config": {
+    "augmentation_factor": 3,
+    "balance_classes": true,
+    "batch_size": 8,
+    "channels": 3,
+    "epochs": 50,
+    "freeze_epochs": 10,
+    "img_size": [
+      224,
+      224
+    ],
+    "learning_rate": 0.0005,
+    "model_type": "enhanced_cnn",
+    "test_size": 0.2,
+    "unfreeze_epochs": 25,
+    "use_attention": true,
+    "use_mixed_precision": true,
+    "val_size": 0.15,
+    "warmup_epochs": 5
+  },
+  "precision_macro": 0.8333333333333334,
+  "precision_micro": 0.96,
+  "precision_weighted": 0.98,
+  "recall_macro": 0.9761904761904763,
+  "recall_micro": 0.96,
+  "recall_weighted": 0.96,
+  "reproducible_seed": 42,
+  "roc_auc_per_class": {
+    "dog": 0.9583333333333334,
+    "human": 1.0,
+    "snake": 0.974025974025974
+  },
+  "test_accuracy": 0.96,
+  "total_epochs": 20,
+  "total_pipeline_time": 8634.613312005997
+}

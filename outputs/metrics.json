@@ -1,34 +1,34 @@
 {
-    "test_accuracy": 0.7692307829856873,
-    "test_loss": 0.6545594930648804,
-    "f1_macro": 0.5341880341880342,
-    "f1_weighted": 0.7445759368836293,
-    "classification_report": "              precision    recall  f1-score   support\n\n       human      0.625     1.000     0.769         5\n         dog      0.000     0.000     0.000         1\n       snake      1.000     0.714     0.833         7\n\n    accuracy                          0.769        13\n   macro avg      0.542     0.571     0.534        13\nweighted avg      0.779     0.769     0.745        13\n",
+    "test_accuracy": 0.9230769276618958,
+    "test_loss": 0.5288825035095215,
+    "f1_macro": 0.6444444444444445,
+    "f1_weighted": 0.8871794871794871,
+    "classification_report": "              precision    recall  f1-score   support\n\n       human      0.000     0.000     0.000         1\n         dog      1.000     1.000     1.000         5\n       snake      0.875     1.000     0.933         7\n\n    accuracy                          0.923        13\n   macro avg      0.625     0.667     0.644        13\nweighted avg      0.856     0.923     0.887        13\n",
     "confusion_matrix": [
         [
+            0,
+            0,
+            1
+        ],
+        [
+            0,
             5,
-            0,
             0
         ],
         [
-            1,
             0,
-            0
-        ],
-        [
-            2,
             0,
-            5
+            7
         ]
     ],
-    "confusion_matrix_str": "[[5 0 0]\n [1 0 0]\n [2 0 5]]",
+    "confusion_matrix_str": "[[0 0 1]\n [0 5 0]\n [0 0 7]]",
     "total_samples": 62,
     "train_samples": 207,
     "val_samples": 10,
     "test_samples": 13,
     "classes": [
-        "human",
         "dog",
+        "human",
         "snake"
     ],
     "image_size": [

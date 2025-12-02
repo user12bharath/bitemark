@@ -1,0 +1,41 @@
+{
+  "name": "bitemark-classification-system",
+  "version": "1.0.0",
+  "description": "Complete Bite Mark Classification System with ML Pipeline, Backend API, and Frontend",
+  "main": "main_pipeline.py",
+  "directories": {
+    "frontend": "React frontend application",
+    "backend": "Flask API server",
+    "src": "ML pipeline source code",
+    "data": "Dataset directory",
+    "models": "Trained models",
+    "outputs": "Results and metrics"
+  },
+  "scripts": {
+    "start": "powershell -ExecutionPolicy Bypass -File start.ps1",
+    "install-all": "cd backend && pip install -r requirements.txt && cd ../frontend && npm install",
+    "start-backend": "cd backend && python app.py",
+    "start-frontend": "cd frontend && npm run dev",
+    "build-frontend": "cd frontend && npm run build",
+    "train-model": "python main_pipeline.py"
+  },
+  "keywords": [
+    "forensic-analysis",
+    "bite-mark",
+    "classification",
+    "deep-learning",
+    "cnn",
+    "react",
+    "flask",
+    "tensorflow"
+  ],
+  "author": "Forensic Research Team",
+  "license": "Forensic Research License",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user12bharath/bitemark"
+  },
+  "dependencies": {
+    "firebase": "^12.5.0"
+  }
+}

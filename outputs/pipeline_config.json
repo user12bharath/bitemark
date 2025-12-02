@@ -1,0 +1,20 @@
+{
+  "img_size": [
+    224,
+    224
+  ],
+  "channels": 3,
+  "batch_size": 8,
+  "epochs": 50,
+  "learning_rate": 0.0005,
+  "test_size": 0.2,
+  "val_size": 0.15,
+  "augmentation_factor": 3,
+  "balance_classes": true,
+  "model_type": "enhanced_cnn",
+  "use_attention": true,
+  "use_mixed_precision": true,
+  "freeze_epochs": 10,
+  "warmup_epochs": 5,
+  "unfreeze_epochs": 25
+}

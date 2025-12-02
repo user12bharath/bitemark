@@ -1,0 +1,731 @@
+2025-12-02 07:33:59,212 - global_utils - WARNING - No GPU found, using CPU
+2025-12-02 07:33:59,213 - __main__ - INFO - GPU Available: False
+2025-12-02 07:33:59,213 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2025-12-02 07:33:59,793 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-12-02 07:33:59,796 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2025-12-02 07:33:59,815 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2025-12-02 07:33:59,825 - __main__ - ERROR - Traceback (most recent call last):
+  File "E:\projects\bitemark1\bitemark\backend\app_enhanced.py", line 126, in initialize_api
+    model = tf.keras.models.load_model(model_path)
+  File "E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\saving\saving_api.py", line 262, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\saving\legacy\serialization.py", line 365, in class_and_config_for_serialized_keras_object
+    raise ValueError(
+ValueError: Unknown layer: 'AttentionModule'. Please ensure you are using a `keras.utils.custom_object_scope` and that this object is included in the scope. See https://www.tensorflow.org/guide/keras/save_and_serialize#registering_the_custom_object for details.
+
+2025-12-02 07:35:05,735 - global_utils - WARNING - No GPU found, using CPU
+2025-12-02 07:35:05,736 - __main__ - INFO - GPU Available: False
+2025-12-02 07:35:05,736 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2025-12-02 07:35:06,409 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-12-02 07:35:06,413 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2025-12-02 07:35:06,435 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2025-12-02 07:35:06,449 - __main__ - ERROR - Traceback (most recent call last):
+  File "E:\projects\bitemark1\bitemark\backend\app_enhanced.py", line 126, in initialize_api
+    model = tf.keras.models.load_model(model_path)
+  File "E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\saving\saving_api.py", line 262, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\saving\legacy\serialization.py", line 365, in class_and_config_for_serialized_keras_object
+    raise ValueError(
+ValueError: Unknown layer: 'AttentionModule'. Please ensure you are using a `keras.utils.custom_object_scope` and that this object is included in the scope. See https://www.tensorflow.org/guide/keras/save_and_serialize#registering_the_custom_object for details.
+
+2025-12-02 07:36:20,865 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2025-12-02 07:36:20,865 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2025-12-02 07:36:20,866 - global_utils - WARNING - No GPU found, using CPU
+2025-12-02 07:36:20,866 - __main__ - INFO - GPU Available: False
+2025-12-02 07:36:20,866 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2025-12-02 07:36:20,867 - __main__ - INFO - Shared preprocessor initialized
+2025-12-02 07:36:21,562 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-12-02 07:36:21,566 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2025-12-02 07:36:21,593 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2025-12-02 07:36:22,046 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2025-12-02 07:36:22,047 - __main__ - INFO - Model loaded successfully: ../models/best_model.h5
+2025-12-02 07:36:22,047 - __main__ - INFO -    Input shape: (None, 224, 224, 3)
+2025-12-02 07:36:22,047 - __main__ - INFO -    Output shape: (None, 3)
+2025-12-02 07:36:22,048 - __main__ - INFO -    Total parameters: 31,752
+2025-12-02 07:36:22,049 - __main__ - INFO - Model metrics loaded: 18 metrics
+2025-12-02 07:36:22,049 - __main__ - INFO - API initialization completed successfully!
+2025-12-02 07:36:22,050 - __main__ - INFO - API ready for requests!
+2025-12-02 07:36:22,050 - __main__ - INFO -    Available endpoints:
+2025-12-02 07:36:22,050 - __main__ - INFO -    - POST /predict - Make predictions
+2025-12-02 07:36:22,050 - __main__ - INFO -    - GET /health - Health check
+2025-12-02 07:36:22,050 - __main__ - INFO -    - GET /model/info - Model information
+2025-12-02 07:36:22,050 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2025-12-02 07:36:22,051 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2025-12-02 07:36:22,126 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.208.1.68:5000
+2025-12-02 07:36:22,127 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-02 07:36:39,008 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:39] "[33mOPTIONS /api/stats/dashboard HTTP/1.1[0m" 404 -
+2025-12-02 07:36:39,009 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:39] "[33mOPTIONS /api/stats/recent?limit=5 HTTP/1.1[0m" 404 -
+2025-12-02 07:36:39,012 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:39] "[33mOPTIONS /api/stats/class-distribution HTTP/1.1[0m" 404 -
+2025-12-02 07:36:39,021 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:39] "[33mOPTIONS /api/stats/dashboard HTTP/1.1[0m" 404 -
+2025-12-02 07:36:39,031 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:39] "[33mOPTIONS /api/stats/recent?limit=5 HTTP/1.1[0m" 404 -
+2025-12-02 07:36:39,038 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:39] "[33mOPTIONS /api/stats/class-distribution HTTP/1.1[0m" 404 -
+2025-12-02 07:36:52,639 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:52] "[33mOPTIONS /api/stats/dashboard HTTP/1.1[0m" 404 -
+2025-12-02 07:36:52,640 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:52] "[33mOPTIONS /api/stats/recent?limit=5 HTTP/1.1[0m" 404 -
+2025-12-02 07:36:52,641 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:52] "[33mOPTIONS /api/stats/class-distribution HTTP/1.1[0m" 404 -
+2025-12-02 07:36:52,644 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:52] "[33mOPTIONS /api/stats/dashboard HTTP/1.1[0m" 404 -
+2025-12-02 07:36:52,648 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:52] "[33mOPTIONS /api/stats/recent?limit=5 HTTP/1.1[0m" 404 -
+2025-12-02 07:36:52,652 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:36:52] "[33mOPTIONS /api/stats/class-distribution HTTP/1.1[0m" 404 -
+2025-12-02 07:38:35,048 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:38:35] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:38:35,050 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:38:35] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:38:35,307 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:38:35] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:38:35,354 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:38:35] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:38:36,646 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:38:36] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:38:36,964 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:38:36] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:38:36,966 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:38:36] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:38:37,277 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:38:37] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:38:38,299 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:38:38] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:38:38,301 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:38:38] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:40:41,691 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2025-12-02 07:40:41,691 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2025-12-02 07:40:41,692 - global_utils - WARNING - No GPU found, using CPU
+2025-12-02 07:40:41,692 - __main__ - INFO - GPU Available: False
+2025-12-02 07:40:41,693 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2025-12-02 07:40:41,693 - __main__ - INFO - Shared preprocessor initialized
+2025-12-02 07:40:42,270 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-12-02 07:40:42,274 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2025-12-02 07:40:42,292 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2025-12-02 07:40:42,655 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2025-12-02 07:40:42,656 - __main__ - INFO - Model loaded successfully: ../models/best_model.h5
+2025-12-02 07:40:42,656 - __main__ - INFO -    Input shape: (None, 224, 224, 3)
+2025-12-02 07:40:42,656 - __main__ - INFO -    Output shape: (None, 3)
+2025-12-02 07:40:42,657 - __main__ - INFO -    Total parameters: 31,752
+2025-12-02 07:40:42,658 - __main__ - INFO - Model metrics loaded: 18 metrics
+2025-12-02 07:40:42,658 - __main__ - INFO - API initialization completed successfully!
+2025-12-02 07:40:42,658 - __main__ - INFO - API ready for requests!
+2025-12-02 07:40:42,658 - __main__ - INFO -    Available endpoints:
+2025-12-02 07:40:42,658 - __main__ - INFO -    - POST /predict - Make predictions
+2025-12-02 07:40:42,658 - __main__ - INFO -    - GET /health - Health check
+2025-12-02 07:40:42,659 - __main__ - INFO -    - GET /model/info - Model information
+2025-12-02 07:40:42,659 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2025-12-02 07:40:42,659 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2025-12-02 07:40:42,681 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.208.1.68:5000
+2025-12-02 07:40:42,681 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-02 07:41:41,894 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2025-12-02 07:41:41,894 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2025-12-02 07:41:41,894 - global_utils - WARNING - No GPU found, using CPU
+2025-12-02 07:41:41,894 - __main__ - INFO - GPU Available: False
+2025-12-02 07:41:41,895 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2025-12-02 07:41:41,895 - __main__ - INFO - Shared preprocessor initialized
+2025-12-02 07:41:42,457 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-12-02 07:41:42,460 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2025-12-02 07:41:42,480 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2025-12-02 07:41:42,826 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2025-12-02 07:41:42,827 - __main__ - INFO - Model loaded successfully: ../models/best_model.h5
+2025-12-02 07:41:42,827 - __main__ - INFO -    Input shape: (None, 224, 224, 3)
+2025-12-02 07:41:42,828 - __main__ - INFO -    Output shape: (None, 3)
+2025-12-02 07:41:42,828 - __main__ - INFO -    Total parameters: 31,752
+2025-12-02 07:41:42,829 - __main__ - INFO - Model metrics loaded: 18 metrics
+2025-12-02 07:41:42,829 - __main__ - INFO - API initialization completed successfully!
+2025-12-02 07:41:42,829 - __main__ - INFO - API ready for requests!
+2025-12-02 07:41:42,829 - __main__ - INFO -    Available endpoints:
+2025-12-02 07:41:42,829 - __main__ - INFO -    - POST /predict - Make predictions
+2025-12-02 07:41:42,829 - __main__ - INFO -    - GET /health - Health check
+2025-12-02 07:41:42,830 - __main__ - INFO -    - GET /model/info - Model information
+2025-12-02 07:41:42,830 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2025-12-02 07:41:42,830 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2025-12-02 07:41:42,847 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.208.1.68:5000
+2025-12-02 07:41:42,847 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-02 07:43:50,623 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:50] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:43:50,624 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:50] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:43:50,886 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:50] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:43:50,933 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:50] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:43:50,936 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:50] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:43:51,198 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:51] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:43:52,513 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:52] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:43:52,516 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:52] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:43:52,782 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:52] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:43:52,830 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:52] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:43:52,832 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:52] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:43:53,096 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:43:53] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:02,689 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:02] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:02,991 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:02] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:02,995 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:02] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:03,305 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:03] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:03,308 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:03] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:03,618 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:03] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:04,432 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:04] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:04,743 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:04] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:04,760 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:04] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:05,058 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:05] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:05,073 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:05] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:05,384 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:05] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:31,961 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:31] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:31,963 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:31] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:31,971 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:31] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:32,210 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:32] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:32,287 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:32] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:32,288 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:32] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:34,946 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:34] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:35,249 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:35] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:35,264 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:35] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:35,564 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:35] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:35,569 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:35] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:35,874 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:35] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:47,910 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:47] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:47,911 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:47] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:48,174 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:48] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:48,269 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:48] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:48,270 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:48] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:48,522 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:48] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:49,303 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:49] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:49,606 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:49] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:49,607 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:49] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:49,912 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:49] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:49,914 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:49] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:50,233 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:50] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:56,799 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:56] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:56,801 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:56] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:57,064 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:57] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:57,112 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:57] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:44:57,114 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:57] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:44:57,378 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:44:57] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:09,967 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:09] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:45:10,287 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:10] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:45:14,821 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:14] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:14,823 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:14] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:45:15,082 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:15] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:15,127 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:15] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:45:15,129 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:15] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:15,392 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:15] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:19,425 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:19] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:45:19,730 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:19] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:45:26,261 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:26,584 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:26] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:45:26,586 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:26,835 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:26] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:45:26,898 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:26,900 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:31,302 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:31] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:31,306 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:31] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:45:31,568 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:31] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:31,617 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:31] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:45:31,620 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:31] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:31,884 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:31] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:39,175 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:39] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:45:39,479 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:39] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:45:53,333 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:53] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:53,335 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:53] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:45:53,587 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:53] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:53,643 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:53] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:45:53,645 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:53] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:45:53,892 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:45:53] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:46:05,964 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:46:05] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:46:17,520 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:46:17] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:46:17,833 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:46:17] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:46:25,710 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:46:25] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:46:25,978 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:46:25] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:46:28,258 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:46:28] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:46:28,572 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:46:28] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:46:56,578 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:46:56] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:46:56,889 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:46:56] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:47:23,991 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:23] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:47:26,153 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:26] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:47:26,420 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:26] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:47:36,560 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:36] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:47:36,863 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:36] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:47:36,865 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:36] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:47:37,169 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:37] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:47:37,171 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:37] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:47:37,474 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:37] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:47:39,005 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:39] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:47:39,252 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:39] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:47:41,099 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:41] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:47:41,407 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:41] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:47:41,410 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:41] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:47:41,720 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:41] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:47:41,723 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:41] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:47:42,033 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:42] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:47:47,445 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:47] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:47:47,710 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:47:47] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:01,542 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:01] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:01,851 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:01] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:06,790 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:06] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:48:07,108 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:07] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:48:07,109 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:07] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:48:07,376 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:07] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:48:07,423 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:07] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:48:07,426 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:07] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:48:11,504 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:11] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:11,771 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:11] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:12,749 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:12] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:13,063 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:13] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:25,732 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:25] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:25,982 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:25] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:32,838 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:32] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:33,143 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:33] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:41,189 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:41] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:48:41,493 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:41] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:48:44,689 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:44] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:48:44,996 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:48:44] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:49:10,961 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:49:10] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:49:11,279 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:49:11] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:49:16,595 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:49:16] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:49:16,914 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:49:16] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:49:29,960 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:49:29] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:49:30,281 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:49:30] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:49:40,634 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:49:40] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:49:40,957 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:49:40] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:49:47,533 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:49:47] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:49:47,845 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:49:47] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:50:10,974 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:50:10] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:50:11,280 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:50:11] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:50:32,637 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:50:32] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:50:32,950 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:50:32] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 07:50:49,794 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:50:49] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:50:50,100 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:50:50] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 07:51:02,358 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:51:02] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-12-02 07:51:20,651 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:51:20] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-12-02 07:51:58,506 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:51:58] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-12-02 07:52:13,292 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2025-12-02 07:52:13,834 - __main__ - INFO - Prediction logged: 01c2085b-39a1-4a64-bc8f-d051c6368250
+2025-12-02 07:52:13,834 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:52:13] "POST /predict HTTP/1.1" 200 -
+2025-12-02 07:52:29,761 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2025-12-02 07:52:29,852 - __main__ - INFO - Prediction logged: 1c2a6774-fbc8-43fc-81e0-69447a92cce6
+2025-12-02 07:52:29,853 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:52:29] "POST /predict HTTP/1.1" 200 -
+2025-12-02 07:53:39,518 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2025-12-02 07:53:39,611 - __main__ - INFO - Prediction logged: 554ae93b-746b-40a1-84f6-4def1f62ffc3
+2025-12-02 07:53:39,612 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:53:39] "POST /predict HTTP/1.1" 200 -
+2025-12-02 07:55:26,044 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:55:26,046 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:26] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:55:26,311 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:55:26,359 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:26] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:55:26,361 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:55:26,625 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:55:33,975 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:33] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:55:34,279 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:34] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:55:34,281 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:34] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:55:34,590 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:34] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:55:38,313 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:38] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:55:38,317 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:38] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:55:38,551 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:38] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:55:38,630 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:38] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:55:49,152 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:49] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:55:49,460 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:49] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:55:49,462 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:49] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:55:49,770 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:55:49] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:57:06,265 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:57:06] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:57:06,267 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:57:06] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 07:57:06,533 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:57:06] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 07:57:06,580 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 07:57:06] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:06:18,011 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:06:18] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:06:18,015 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:06:18] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:06:18,272 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:06:18] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:06:18,318 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:06:18] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:06:28,454 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:06:28] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:06:28,455 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:06:28] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:06:28,702 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:06:28] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:06:28,765 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:06:28] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:03,552 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:03] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:03,866 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:03] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:07:03,868 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:03] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:04,179 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:04] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:07:19,293 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:19] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:19,295 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:19] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:07:19,561 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:19] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:19,609 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:19] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:07:34,615 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:34] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:34,619 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:34] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:07:34,871 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:34] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:34,935 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:34] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:07:37,573 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:37] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:37,891 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:37] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:07:37,893 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:37] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:38,161 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:38] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:07:44,016 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:44] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:07:44,323 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:44] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:07:56,702 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:56] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:07:57,019 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:57] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:07:59,359 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:59] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:59,361 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:59] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:07:59,618 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:59] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:07:59,667 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:07:59] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:08:11,982 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:11] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:08:12,294 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:12] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:08:19,665 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:19] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:08:20,610 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:20] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:08:20,918 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:20] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:08:23,500 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:23] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:08:23,502 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:23] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:08:23,752 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:23] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:08:23,815 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:23] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:08:24,972 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:24] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:08:25,277 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:25] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:08:32,639 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:32] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:08:32,949 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:32] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:08:58,923 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2025-12-02 08:08:59,015 - __main__ - INFO - Prediction logged: ae3892a5-cc7a-40c4-98c9-f12299096aca
+2025-12-02 08:08:59,016 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:08:59] "POST /predict HTTP/1.1" 200 -
+2025-12-02 08:09:12,474 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2025-12-02 08:09:12,562 - __main__ - INFO - Prediction logged: 5af5b8f1-6f08-4d83-b77f-bdd4b4e07b9e
+2025-12-02 08:09:12,563 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:12] "POST /predict HTTP/1.1" 200 -
+2025-12-02 08:09:22,576 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2025-12-02 08:09:22,696 - __main__ - INFO - Prediction logged: 9f80c3ff-321f-4929-a3a3-4842e7777bcf
+2025-12-02 08:09:22,697 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:22] "POST /predict HTTP/1.1" 200 -
+2025-12-02 08:09:26,379 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:26] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:09:26,643 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:26] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:09:29,326 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:29] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:09:29,638 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:29] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:09:34,124 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:34] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:09:34,429 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:34] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:09:34,430 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:34] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:09:34,734 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:34] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:09:53,121 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:53] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:09:53,379 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:09:53] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:10:03,839 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:10:03] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:10:04,160 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:10:04] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:10:04,162 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:10:04] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:10:04,427 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:10:04] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:10:15,131 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:10:15] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:10:15,449 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:10:15] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:10:15,450 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:10:15] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:10:15,698 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:10:15] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:11:18,017 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:11:18] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:11:18,021 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:11:18] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:11:18,271 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:11:18] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:11:18,335 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:11:18] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:11:21,109 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:11:21] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:11:21,414 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:11:21] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:11:22,481 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:11:22] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:11:22,792 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:11:22] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:11:34,649 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:11:34] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:11:34,916 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:11:34] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:12:58,875 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:12:58] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:12:59,142 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:12:59] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:13:02,066 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:02] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:13:02,386 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:02] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:13:12,002 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:12] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:13:20,972 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:20] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:13:21,282 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:21] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:13:26,818 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:13:27,123 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:27] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:13:27,126 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:27] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:13:27,442 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:27] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:13:49,306 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:49] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:13:49,309 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:49] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:13:49,560 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:49] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:13:49,623 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:13:49] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:14:05,499 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:14:05] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:14:05,816 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:14:05] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:14:15,336 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:14:15] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:14:15,338 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:14:15] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:14:15,602 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:14:15] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:14:15,649 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:14:15] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:15:20,867 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:20] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:15:20,882 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:20] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:15:21,135 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:21] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:15:21,174 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:21] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:15:28,063 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:28] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:15:28,371 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:28] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:15:28,434 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:28] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:15:28,687 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:28] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:15:36,216 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:36] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:15:36,482 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:36] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:15:47,009 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:47] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:15:47,316 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:47] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:15:47,318 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:47] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:15:47,630 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:47] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:15:50,136 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:50] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:15:50,403 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:50] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:15:56,626 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2025-12-02 08:15:56,716 - __main__ - INFO - Prediction logged: eb9d150a-5709-452a-9e4c-c62065658ccd
+2025-12-02 08:15:56,717 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:56] "POST /predict HTTP/1.1" 200 -
+2025-12-02 08:15:59,687 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:59] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:15:59,947 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:15:59] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:16:11,731 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:16:11] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:16:12,037 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:16:12] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:16:12,039 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:16:12] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:16:12,307 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:16:12] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:16:22,165 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:16:22] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:16:22,483 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:16:22] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:17:25,932 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:17:25] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:17:25,933 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:17:25] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:17:26,277 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:17:26] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:17:36,678 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:17:36] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:17:36,988 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:17:36] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:17:40,890 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:17:40] "[33mOPTIONS /analytics/history/01c2085b-39a1-4a64-bc8f-d051c6368250 HTTP/1.1[0m" 404 -
+2025-12-02 08:18:15,281 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:18:15] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:18:15,545 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:18:15] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:18:19,544 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:18:19] "[33mOPTIONS /analytics/history/01c2085b-39a1-4a64-bc8f-d051c6368250 HTTP/1.1[0m" 404 -
+2025-12-02 08:19:00,214 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2025-12-02 08:19:00,214 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2025-12-02 08:19:00,215 - global_utils - WARNING - No GPU found, using CPU
+2025-12-02 08:19:00,215 - __main__ - INFO - GPU Available: False
+2025-12-02 08:19:00,215 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2025-12-02 08:19:00,215 - __main__ - INFO - Shared preprocessor initialized
+2025-12-02 08:19:00,898 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-12-02 08:19:00,902 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2025-12-02 08:19:00,927 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2025-12-02 08:19:01,368 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2025-12-02 08:19:01,381 - __main__ - INFO - Model loaded successfully: ../models/best_model.h5
+2025-12-02 08:19:01,381 - __main__ - INFO -    Input shape: (None, 224, 224, 3)
+2025-12-02 08:19:01,381 - __main__ - INFO -    Output shape: (None, 3)
+2025-12-02 08:19:01,382 - __main__ - INFO -    Total parameters: 31,752
+2025-12-02 08:19:01,383 - __main__ - INFO - Model metrics loaded: 18 metrics
+2025-12-02 08:19:01,383 - __main__ - INFO - API initialization completed successfully!
+2025-12-02 08:19:01,383 - __main__ - INFO - API ready for requests!
+2025-12-02 08:19:01,383 - __main__ - INFO -    Available endpoints:
+2025-12-02 08:19:01,384 - __main__ - INFO -    - POST /predict - Make predictions
+2025-12-02 08:19:01,384 - __main__ - INFO -    - GET /health - Health check
+2025-12-02 08:19:01,384 - __main__ - INFO -    - GET /model/info - Model information
+2025-12-02 08:19:01,384 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2025-12-02 08:19:01,385 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2025-12-02 08:19:01,385 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2025-12-02 08:19:01,405 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.208.1.68:5000
+2025-12-02 08:19:01,405 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-02 08:19:24,206 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:24] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:19:24,459 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:24] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:19:29,474 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:29] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:19:29,788 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:29] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:19:29,790 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:29] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:19:30,103 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:30] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:19:35,195 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:35] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:19:35,454 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:35] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:19:35,767 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:35] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:19:36,084 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:36] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:19:42,153 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:42] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:19:42,462 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:42] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:19:42,473 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:42] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:19:42,771 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:42] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:19:45,198 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:45] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:19:45,457 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:45] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:19:46,845 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:46] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:19:47,155 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:47] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:19:52,391 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2025-12-02 08:19:52,763 - __main__ - INFO - Prediction logged: 7525470c-7100-4fe5-af8c-2c52dc4b75e9
+2025-12-02 08:19:52,765 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:52] "POST /predict HTTP/1.1" 200 -
+2025-12-02 08:19:56,017 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:56] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:19:56,268 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:56] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:19:59,048 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:59] "OPTIONS /analytics/history/7525470c-7100-4fe5-af8c-2c52dc4b75e9 HTTP/1.1" 200 -
+2025-12-02 08:19:59,356 - __main__ - INFO - Analysis deleted: 7525470c-7100-4fe5-af8c-2c52dc4b75e9
+2025-12-02 08:19:59,356 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:19:59] "DELETE /analytics/history/7525470c-7100-4fe5-af8c-2c52dc4b75e9 HTTP/1.1" 200 -
+2025-12-02 08:20:02,039 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:02] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:20:02,349 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:02] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:20:03,338 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:03] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:20:03,652 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:03] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:20:03,656 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:03] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:20:03,907 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:03] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:20:06,890 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:06] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:20:07,212 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:07] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:20:07,214 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:07] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:20:07,466 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:07] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:20:09,720 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:09] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:20:10,040 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:10] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:20:10,042 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:10] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:20:10,309 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:10] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:20:14,960 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:14] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:20:15,272 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:15] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:20:16,746 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:16] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:20:17,067 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:17] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:20:17,069 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:17] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:20:17,331 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:17] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:20:20,440 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:20] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:20:20,760 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:20] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:20:20,762 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:20] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:20:21,012 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:21] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:20:25,718 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:25] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:20:26,033 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:26] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:20:27,113 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:27] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:20:27,421 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:27] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:20:27,842 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:27] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:20:28,157 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:28] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:20:28,158 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:28] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:20:28,408 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:28] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:20:28,725 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:28] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:20:29,041 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:29] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:20:29,043 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:29] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:20:29,345 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:29] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:20:30,555 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:30] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:20:30,806 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:30] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:20:59,941 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:20:59] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:21:00,246 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:00] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:21:00,249 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:00] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:21:00,565 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:00] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:21:06,119 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:06] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:21:06,121 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:06] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:21:06,388 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:06] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:21:06,433 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:06] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:21:10,424 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:10] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:21:10,737 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:10] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:21:10,739 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:10] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:21:11,001 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:11] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:21:48,787 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:48] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:21:48,789 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:48] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:21:49,052 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:49] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:21:49,099 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:49] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:21:53,032 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:53] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:21:53,345 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:53] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:21:53,347 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:53] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:21:53,653 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:53] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:21:58,833 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:58] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:21:58,836 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:58] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:21:59,082 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:59] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:21:59,146 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:21:59] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:22:06,202 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:06] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:22:06,518 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:06] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:22:08,387 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:08] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:08,697 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:08] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:08,700 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:08] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:09,007 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:09] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:09,884 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:09] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:22:09,888 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:09] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:22:10,133 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:10] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:22:10,196 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:10] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:22:12,638 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:12] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:12,951 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:12] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:12,952 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:12] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:13,266 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:13] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:35,916 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:35] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:35,918 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:35] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:36,180 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:36] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:36,226 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:36] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:41,328 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:41] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:22:41,639 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:41] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:22:41,640 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:41] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:22:41,953 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:41] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:22:46,018 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:46] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:46,019 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:46] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:46,277 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:46] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:46,325 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:46] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:47,907 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:47] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:22:48,216 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:48] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:22:49,166 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:49] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:49,167 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:49] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:49,424 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:49] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:49,471 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:49] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:49,558 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:49] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:22:49,864 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:49] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:22:50,375 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:50] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:22:50,378 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:50] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:22:50,634 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:50] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:22:50,681 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:50] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:22:50,818 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:50] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:22:51,124 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:51] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:22:52,116 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:52] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:52,117 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:52] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:52,363 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:52] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:52,423 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:52] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:56,018 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:56] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:56,318 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:56] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:22:56,321 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:56] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:22:56,624 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:22:56] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:24:08,370 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:24:08] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:24:08,372 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:24:08] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:24:08,634 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:24:08] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:24:08,681 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:24:08] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:24:48,358 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:24:48] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:24:48,661 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:24:48] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:24:48,663 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:24:48] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:24:48,975 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:24:48] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:24:59,879 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:24:59] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:24:59,881 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:24:59] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:25:00,125 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:25:00] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:25:00,187 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:25:00] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:27:30,200 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2025-12-02 08:27:30,200 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2025-12-02 08:27:30,201 - global_utils - WARNING - No GPU found, using CPU
+2025-12-02 08:27:30,201 - __main__ - INFO - GPU Available: False
+2025-12-02 08:27:30,201 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2025-12-02 08:27:30,201 - __main__ - INFO - Shared preprocessor initialized
+2025-12-02 08:27:30,870 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-12-02 08:27:30,873 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2025-12-02 08:27:30,896 - tensorflow - WARNING - From E:\projects\bitemark1\bitemark\.venv\lib\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2025-12-02 08:27:31,277 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2025-12-02 08:27:31,278 - __main__ - INFO - Model loaded successfully: ../models/best_model.h5
+2025-12-02 08:27:31,279 - __main__ - INFO -    Input shape: (None, 224, 224, 3)
+2025-12-02 08:27:31,279 - __main__ - INFO -    Output shape: (None, 3)
+2025-12-02 08:27:31,280 - __main__ - INFO -    Total parameters: 31,752
+2025-12-02 08:27:31,281 - __main__ - INFO - Model metrics loaded: 18 metrics
+2025-12-02 08:27:31,281 - __main__ - INFO - API initialization completed successfully!
+2025-12-02 08:27:31,281 - __main__ - INFO - API ready for requests!
+2025-12-02 08:27:31,282 - __main__ - INFO -    Available endpoints:
+2025-12-02 08:27:31,282 - __main__ - INFO -    - POST /predict - Make predictions
+2025-12-02 08:27:31,282 - __main__ - INFO -    - GET /health - Health check
+2025-12-02 08:27:31,282 - __main__ - INFO -    - GET /model/info - Model information
+2025-12-02 08:27:31,282 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2025-12-02 08:27:31,282 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2025-12-02 08:27:31,283 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2025-12-02 08:27:31,313 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.208.1.68:5000
+2025-12-02 08:27:31,313 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-02 08:27:39,841 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:39] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:27:39,843 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:39] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:27:40,110 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:40] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:27:40,155 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:40] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:27:45,170 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:45] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:27:45,480 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:45] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:27:46,800 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:46] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:27:47,112 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:47] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:27:47,113 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:47] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:27:47,367 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:47] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:27:51,863 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:51] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:27:52,175 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:52] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:27:55,544 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:55] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:27:55,853 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:27:55] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:28:01,817 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:01] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:28:02,124 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:02] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:28:02,126 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:02] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:28:02,429 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:02] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:28:06,339 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:06] "GET /health HTTP/1.1" 200 -
+2025-12-02 08:28:06,595 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:06] "GET /model/info HTTP/1.1" 200 -
+2025-12-02 08:28:11,650 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:11] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:28:11,954 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:11] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:28:11,956 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:11] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:28:12,231 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:12] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:28:18,014 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2025-12-02 08:28:18,385 - __main__ - INFO - Prediction logged: 8f360a34-2cde-4da5-adbe-995e9dc47334
+2025-12-02 08:28:18,386 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:18] "POST /predict HTTP/1.1" 200 -
+2025-12-02 08:28:22,570 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:22] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:28:22,833 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:22] "GET /analytics/history HTTP/1.1" 200 -
+2025-12-02 08:28:25,043 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:25] "OPTIONS /analytics/history/8f360a34-2cde-4da5-adbe-995e9dc47334 HTTP/1.1" 200 -
+2025-12-02 08:28:25,353 - __main__ - INFO - Analysis deleted: 8f360a34-2cde-4da5-adbe-995e9dc47334
+2025-12-02 08:28:25,353 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:25] "DELETE /analytics/history/8f360a34-2cde-4da5-adbe-995e9dc47334 HTTP/1.1" 200 -
+2025-12-02 08:28:26,589 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:28:26,900 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:26] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2025-12-02 08:28:26,901 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:26] "GET /analytics/stats HTTP/1.1" 200 -
+2025-12-02 08:28:27,153 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2025 08:28:27] "GET /analytics/history?limit=5 HTTP/1.1" 200 -

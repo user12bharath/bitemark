@@ -78,6 +78,8 @@ def plot_training_history(history, output_path='outputs/training_history.png'):
 
 def plot_confusion_matrix(y_true, y_pred, class_names, output_path='outputs/confusion_matrix.png'):
     """Plot confusion matrix heatmap"""
+    import seaborn as sns  # Import only when needed
+    
     cm = confusion_matrix(y_true, y_pred)
     
     plt.figure(figsize=(10, 8))
@@ -132,7 +134,58 @@ def plot_sample_predictions(model, test_data, class_names, num_samples=12,
     plt.close()
 
 
-def save_metrics(metrics_dict, output_path='outputs/metrics.json'):
+def export_model_summary(model, output_path='outputs/model_summary.txt'):
+    """Export model architecture summary to file"""
+    with open(output_path, 'w') as f:
+        model.summary(print_fn=lambda x: f.write(x + '\n'))
+    print(f"✓ Model summary saved to {output_path}")
+
+
+def plot_misclassified_samples(images, y_true, y_pred, class_names, 
+                               output_path='outputs/misclassified_analysis.png',
+                               num_samples=12):
+    """Plot misclassified samples separately for detailed analysis"""
+    wrong_indices = np.where(y_true != y_pred)[0]
+    
+    if len(wrong_indices) == 0:
+        print("✓ No misclassified samples found!")
+        return
+    
+    # Select random misclassified samples
+    show_indices = np.random.choice(wrong_indices, min(num_samples, len(wrong_indices)), replace=False)
+    
+    rows = 3
+    cols = 4
+    fig, axes = plt.subplots(rows, cols, figsize=(16, 12))
+    axes = axes.flatten()
+    
+    for i, idx in enumerate(show_indices):
+        img = images[idx]
+        if len(img.shape) == 3 and img.shape[2] == 1:
+            img = img.squeeze()
+            axes[i].imshow(img, cmap='gray')
+        else:
+            axes[i].imshow(img)
+        
+        true_class = class_names[y_true[idx]]
+        pred_class = class_names[y_pred[idx]]
+        
+        axes[i].set_title(f'True: {true_class}\nPred: {pred_class}', 
+                         fontsize=10, color='red')
+        axes[i].axis('off')
+    
+    # Hide empty subplots
+    for i in range(len(show_indices), len(axes)):
+        axes[i].axis('off')
+    
+    plt.suptitle(f'Misclassified Samples Analysis ({len(wrong_indices)} total errors)', 
+                 fontsize=16, fontweight='bold', color='red')
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    print(f"✓ Misclassified samples saved to {output_path}")
+    plt.close()
+    
+    return wrong_indices
     """Save evaluation metrics to JSON file"""
     with open(output_path, 'w') as f:
         json.dump(metrics_dict, f, indent=4)
@@ -161,6 +214,20 @@ def get_class_weights(train_labels):
         print(f"  Class {cls}: {weight:.3f}")
     
     return class_weight_dict
+
+
+def save_metrics(metrics, output_path='outputs/metrics.json'):
+    """
+    Save evaluation metrics to JSON file
+    
+    Args:
+        metrics: Dictionary of evaluation metrics
+        output_path: Path to save metrics JSON
+    """
+    import json
+    with open(output_path, 'w') as f:
+        json.dump(metrics, f, indent=4)
+    print(f"✓ Metrics saved to: {output_path}")
 
 
 def generate_summary_report(metrics, history, training_time, output_path='outputs/summary_report.md'):

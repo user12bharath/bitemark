@@ -16,22 +16,52 @@ np.random.seed(SEED)
 tf.random.set_seed(SEED)
 
 
+class AugmentationConfig:
+    """Configuration class for augmentation parameters"""
+    def __init__(self):
+        self.brightness = (0.7, 1.3)  # Wider range for forensic photos
+        self.contrast = (0.8, 1.2)
+        self.noise_level = 0.01  # Reduced noise
+        self.blur_kernel = 1  # Minimal blur
+        self.rotation_range = 15  # Degrees
+        self.zoom_range = (0.95, 1.05)
+        self.shear_range = (-0.1, 0.1)
+        self.perspective_strength = 0.05  # Reduced perspective
+        self.saturation = (0.8, 1.2)
+        self.disable_vertical_flip = False  # Can be set True for human bites
+        
+        # Probabilities for each augmentation
+        self.prob_rotation = 0.6
+        self.prob_flip_h = 0.5
+        self.prob_flip_v = 0.3
+        self.prob_brightness = 0.7
+        self.prob_contrast = 0.7
+        self.prob_saturation = 0.5
+        self.prob_noise = 0.4
+        self.prob_blur = 0.3
+        self.prob_zoom = 0.4
+        self.prob_shear = 0.3
+        self.prob_perspective = 0.1  # Reduced from 0.2 to avoid errors
+
+
 class BiteMarkAugmentor:
     """
     Advanced augmentation techniques specifically designed for bite mark images
     Optimized for real forensic images with class imbalance handling
     """
     
-    def __init__(self, preserve_features=True, balance_classes=True):
+    def __init__(self, preserve_features=True, balance_classes=True, config=None):
         """
         Initialize augmentor
         
         Args:
             preserve_features: If True, limit augmentation to preserve bite patterns
             balance_classes: If True, augment minority classes more to balance dataset
+            config: AugmentationConfig object for parameter control
         """
         self.preserve_features = preserve_features
         self.balance_classes = balance_classes
+        self.config = config if config else AugmentationConfig()
         
     def augment_dataset(self, images, labels, augmentation_factor=2, 
                        class_names=None, save_augmented=False, augmented_dir='data/augmented'):
@@ -96,6 +126,25 @@ class BiteMarkAugmentor:
                     aug_imgs = []
                     for idx, img in enumerate(class_images):
                         aug_img = self.apply_random_augmentation(img)
+                        
+                        # Ensure consistent shape and type
+                        if hasattr(aug_img, 'numpy'):  # TensorFlow tensor
+                            aug_img = aug_img.numpy()
+                        
+                        # Ensure correct shape (match original image)
+                        original_shape = img.shape
+                        if aug_img.shape != original_shape:
+                            # Resize to match original if needed
+                            if len(original_shape) == 3:
+                                aug_img = cv2.resize(aug_img, (original_shape[1], original_shape[0]))
+                                if len(aug_img.shape) == 2:  # Add channel dimension if lost
+                                    aug_img = aug_img[..., np.newaxis]
+                            else:
+                                aug_img = cv2.resize(aug_img, (original_shape[1], original_shape[0]))
+                        
+                        # Ensure float32 type for consistency
+                        aug_img = aug_img.astype(np.float32)
+                        
                         aug_imgs.append(aug_img)
                         
                         # Save augmented image if requested
@@ -105,6 +154,20 @@ class BiteMarkAugmentor:
                             # Convert to uint8 for saving
                             save_img = (np.clip(aug_img, 0, 1) * 255).astype(np.uint8)
                             cv2.imwrite(output_path, save_img)
+                    
+                    # Ensure all images have exactly the same shape before creating array
+                    if aug_imgs:
+                        expected_shape = aug_imgs[0].shape
+                        for j, aug_img in enumerate(aug_imgs):
+                            if aug_img.shape != expected_shape:
+                                print(f"    ⚠ Shape mismatch fixed for image {j}: {aug_img.shape} -> {expected_shape}")
+                                if len(expected_shape) == 3:
+                                    aug_imgs[j] = cv2.resize(aug_img, (expected_shape[1], expected_shape[0]))
+                                    if len(aug_imgs[j].shape) == 2:
+                                        aug_imgs[j] = aug_imgs[j][..., np.newaxis]
+                                else:
+                                    aug_imgs[j] = cv2.resize(aug_img, (expected_shape[1], expected_shape[0]))
+                                aug_imgs[j] = aug_imgs[j].astype(np.float32)
                     
                     augmented_images.append(np.array(aug_imgs))
                     augmented_labels.append(class_labels)
@@ -161,12 +224,61 @@ class BiteMarkAugmentor:
         img = image.copy()
         
         # Random rotation (limited to preserve orientation)
-        if np.random.random() > 0.4:
-            img = self._rotate(img, angle_range=(-20, 20))
+        if np.random.random() < self.config.prob_rotation:
+            img = self._rotate(img, angle_range=(-self.config.rotation_range, self.config.rotation_range))
         
-        # Random flip (horizontal only)
-        if np.random.random() > 0.5:
+        # Random flip (horizontal only by default)
+        if np.random.random() < self.config.prob_flip_h:
             img = self._flip_horizontal(img)
+        
+        # Random vertical flip (can be disabled for human bites)
+        if not self.config.disable_vertical_flip and np.random.random() < self.config.prob_flip_v:
+            img = tf.image.flip_up_down(img).numpy()
+        
+        # Random brightness adjustment (important for real photos with varying lighting)
+        if np.random.random() < self.config.prob_brightness:
+            img = self._adjust_brightness(img, factor_range=self.config.brightness)
+        
+        # Random contrast adjustment
+        if np.random.random() < self.config.prob_contrast:
+            img = self._adjust_contrast(img, factor_range=self.config.contrast)
+        
+        # Random saturation (for color images)
+        if (np.random.random() < self.config.prob_saturation and 
+            len(img.shape) == 3 and img.shape[2] == 3):
+            img = self._adjust_saturation(img, factor_range=self.config.saturation)
+        
+        # Random noise (subtle, to simulate camera noise)
+        if np.random.random() < self.config.prob_noise:
+            img = self._add_noise(img, noise_level=self.config.noise_level)
+        
+        # Random blur (very subtle, to simulate focus variation)
+        if np.random.random() < self.config.prob_blur:
+            img = self._apply_blur(img, kernel_size=self.config.blur_kernel)
+        
+        # Random zoom (slight)
+        if np.random.random() < self.config.prob_zoom and not self.preserve_features:
+            img = self._zoom(img, zoom_range=self.config.zoom_range)
+        
+        # Random shear (slight, to simulate angle variation)
+        if np.random.random() < self.config.prob_shear:
+            img = self._shear(img, shear_range=self.config.shear_range)
+        
+        # Random perspective transform (very subtle)
+        if np.random.random() < self.config.prob_perspective:
+            img = self._perspective_transform(img, strength=self.config.perspective_strength)
+        
+        # Ensure consistent output format
+        if hasattr(img, 'numpy'):  # Convert TensorFlow tensor to numpy
+            img = img.numpy()
+        
+        # Ensure float32 type
+        img = img.astype(np.float32)
+        
+        # Ensure values are in [0, 1] range
+        img = np.clip(img, 0.0, 1.0)
+        
+        return img
         
         # Random vertical flip (for bite marks, this can be valid)
         if np.random.random() > 0.7:
@@ -307,23 +419,42 @@ class BiteMarkAugmentor:
         return sheared
     
     def _perspective_transform(self, image, strength=0.1):
-        """Apply subtle perspective transformation"""
-        h, w = image.shape[:2]
-        
-        # Define source points (corners)
-        src_points = np.float32([[0, 0], [w, 0], [0, h], [w, h]])
-        
-        # Define destination points with random perturbation
-        dst_points = src_points + np.random.uniform(-strength * min(h, w), 
-                                                    strength * min(h, w), 
-                                                    src_points.shape)
-        
-        # Get perspective transform matrix
-        M = cv2.getPerspectiveTransform(src_points, dst_points)
-        
-        # Apply transformation
-        transformed = cv2.warpPerspective(image, M, (w, h), borderMode=cv2.BORDER_REFLECT)
-        return transformed
+        """Apply perspective transformation with proper error handling"""
+        try:
+            if len(image.shape) == 2:
+                h, w = image.shape
+            else:
+                h, w = image.shape[:2]
+            
+            # Skip if image is too small
+            if h < 10 or w < 10:
+                return image
+            
+            # Define source points (corners) - ensure proper format
+            src_points = np.float32([[0, 0], [w-1, 0], [0, h-1], [w-1, h-1]])
+            
+            # Define destination points with controlled perturbation
+            max_offset = min(h, w) * strength * 0.1  # Much smaller offset
+            dst_points = src_points.copy()
+            
+            # Add small random perturbations
+            for i in range(4):
+                dst_points[i] += np.random.uniform(-max_offset, max_offset, 2)
+            
+            # Ensure points are within image bounds
+            dst_points[:, 0] = np.clip(dst_points[:, 0], 0, w-1)
+            dst_points[:, 1] = np.clip(dst_points[:, 1], 0, h-1)
+            
+            # Get perspective transform matrix
+            M = cv2.getPerspectiveTransform(src_points, dst_points)
+            
+            # Apply transformation
+            transformed = cv2.warpPerspective(image, M, (w, h), borderMode=cv2.BORDER_REFLECT)
+            return transformed.astype(np.float32)
+        except Exception as e:
+            # If perspective transform fails, return original image
+            print(f"Warning: Perspective transform failed: {e}")
+            return image
     
     def create_augmentation_pipeline(self):
         """
@@ -347,15 +478,26 @@ def main():
     # Create sample image
     sample_image = np.random.rand(224, 224, 1).astype(np.float32)
     
-    augmentor = BiteMarkAugmentor(preserve_features=True)
+    # Test with custom config
+    config = AugmentationConfig()
+    config.disable_vertical_flip = True  # Example: disable for human bites
+    
+    augmentor = BiteMarkAugmentor(preserve_features=True, config=config)
     
     # Test single augmentation
     augmented = augmentor.apply_random_augmentation(sample_image)
     print(f"✓ Single augmentation: {sample_image.shape} → {augmented.shape}")
     
+    # Test TensorFlow pipeline
+    tf_augment_fn = augmentor.get_tf_augmentation_function()
+    tf_sample = tf.convert_to_tensor(sample_image)
+    tf_label = tf.convert_to_tensor([0])
+    tf_augmented, _ = tf_augment_fn(tf_sample, tf_label)
+    print(f"✓ TensorFlow augmentation: {tf_sample.shape} → {tf_augmented.shape}")
+    
     # Test batch augmentation
     sample_images = np.random.rand(10, 224, 224, 1).astype(np.float32)
-    sample_labels = np.array([0, 1, 2, 3, 0, 1, 2, 3, 0, 1])
+    sample_labels = np.array([0, 1, 2, 0, 1, 2, 0, 1, 2, 0])
     
     aug_images, aug_labels = augmentor.augment_dataset(
         sample_images, sample_labels, augmentation_factor=3

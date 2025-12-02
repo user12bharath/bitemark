@@ -12,7 +12,7 @@ tensorflow>=2.15.0  # For existing pipeline compatibility
 # DETECTION & SEGMENTATION
 # ==========================================
 ultralytics>=8.0.0  # YOLOv9 (includes YOLOv8, YOLOv9, YOLOv10)
-segment-anything-2  # SAM2 (install from git)
+#segment-anything-2  # SAM2 (install from git)
 # Install SAM2 with: pip install git+https://github.com/facebookresearch/segment-anything-2.git
 
 # ==========================================

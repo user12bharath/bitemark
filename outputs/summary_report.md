@@ -1,89 +1,92 @@
-# 🦷 Bite Mark Classification - Training Summary Report
+# 🦷 BiteMark Classification System - Training Report
 
-**Generated on:** 2025-11-10 13:39:13
+## 📊 Executive Summary
 
----
+**Training Completed:** 2025-12-02 04:52:06
 
-## 📊 Dataset Statistics
+### Key Metrics
+- **Test Accuracy:** 96.00%
+- **Macro F1-Score:** 0.877
+- **Weighted F1-Score:** 0.966
+- **Macro AUC:** 0.977
 
-- **Total Samples:** 62
-- **Training Samples:** 207
-- **Validation Samples:** 10
-- **Test Samples:** 13
-- **Classes:** ['human', 'dog', 'snake']
-- **Image Size:** (224, 224)
+## 🏗️ Model Architecture
 
----
+- **Model Type:** enhanced_cnn
+- **Input Shape:** (224, 224)
+- **Total Parameters:** 20
+- **Mixed Precision:** ✓
 
-## ⚙️ Training Configuration
+## 📈 Training Details
 
-- **Training Duration:** 465.77 seconds (7.76 minutes)
-- **Epochs Completed:** 84
+### Configuration
+- **Epochs:** 20
 - **Batch Size:** 8
-- **Optimizer:** Adam
 - **Learning Rate:** 0.0005
-- **GPU Acceleration:** No
-- **Mixed Precision:** Enabled (FP16)
+- **Augmentation Factor:** 3
 
----
+### Performance
+- **Best Validation Accuracy:** 94.74%
+- **Final Training Accuracy:** 100.00%
+- **Final Validation Accuracy:** 89.47%
 
-## 🎯 Model Performance
+## 🔧 System Configuration
 
-### Final Metrics
-- **Test Accuracy:** 76.92%
-- **Test Loss:** 0.6546
+### Hardware
+- **GPU Used:** ✗
+- **Mixed Precision:** ✓
+- **Reproducible Seed:** 42
 
-### Per-Class Metrics
+### Performance
+- **Total Pipeline Time:** 143.91 minutes
+- **Class Weights Used:** ✓
+
+## 📁 Generated Artifacts
+
+### Model Files
+- `models/best_model.h5` - Production-ready trained model
+- `outputs/pipeline_config.json` - Complete pipeline configuration
+
+### Evaluation Reports
+- `outputs/metrics.json` - Comprehensive metrics and results
+- `outputs/summary_report.md` - This detailed report
+
+### Visualizations
+- `outputs/training_history.png` - Training and validation curves
+- `outputs/confusion_matrix.png` - Classification performance matrix
+- `outputs/roc_curves.png` - ROC/AUC analysis curves
+
+## 🎯 Usage Instructions
+
+### Production Deployment
+```python
+import tensorflow as tf
+from src.shared_preprocessing import SharedPreprocessor
+
+# Load the trained model
+model = tf.keras.models.load_model('models/best_model.h5')
+
+# Initialize preprocessor with same config as training
+preprocessor = SharedPreprocessor()
+
+# Process new image for prediction
+processed_image = preprocessor.load_and_preprocess_image('path/to/new/image.jpg')
+prediction = model.predict(processed_image)
 ```
-              precision    recall  f1-score   support
 
-       human      0.625     1.000     0.769         5
-         dog      0.000     0.000     0.000         1
-       snake      1.000     0.714     0.833         7
+### Model Performance Guidelines
+- **Confidence Threshold:** Use predictions with >80% confidence
+- **Batch Processing:** Optimal batch size is 8
+- **Input Requirements:** Images should be preprocessed to (224, 224) pixels
 
-    accuracy                          0.769        13
-   macro avg      0.542     0.571     0.534        13
-weighted avg      0.779     0.769     0.745        13
+## 🔍 Quality Assurance
 
-```
-
-### Training Progress
-- **Best Validation Accuracy:** 100.00%
-- **Final Training Accuracy:** 97.10%
-- **Final Validation Accuracy:** 100.00%
+This model has been trained using:
+- ✅ Reproducible random seeds
+- ✅ Advanced data augmentation
+- ✅ Class imbalance handling
+- ✅ Comprehensive evaluation metrics
+- ✅ Production-grade preprocessing
 
 ---
-
-## 📈 Confusion Matrix Summary
-
-```
-[[5 0 0]
- [1 0 0]
- [2 0 5]]
-```
-
----
-
-## 💾 Model Artifacts
-
-- **Best Model:** `models/best_model.h5`
-- **Training History Plot:** `outputs/training_history.png`
-- **Confusion Matrix:** `outputs/confusion_matrix.png`
-- **Sample Predictions:** `outputs/sample_predictions.png`
-- **Metrics JSON:** `outputs/metrics.json`
-
----
-
-## 🚀 Hardware Utilization
-
-- **GPU Model:** CPU
-- **Memory Optimization:** Mixed Precision (FP16)
-- **Batch Size Optimization:** Adaptive based on 4GB VRAM
-
----
-
-## ✅ Conclusion
-
-The bite mark classification model has been successfully trained and evaluated.
-Review the visualizations and metrics for detailed performance analysis.
-
+*Report generated automatically by the Enhanced BiteMark Classification System*

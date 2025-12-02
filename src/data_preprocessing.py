@@ -12,11 +12,25 @@ import cv2
 from pathlib import Path
 
 
+class PreprocessingConfig:
+    """Shared preprocessing configuration to ensure train-inference consistency"""
+    def __init__(self, img_size=(224, 224), grayscale=True, normalize=True,
+                 adaptive_histogram=True, denoise=True, clahe_clip_limit=2.0,
+                 clahe_tile_size=(8, 8)):
+        self.img_size = img_size
+        self.grayscale = grayscale
+        self.normalize = normalize
+        self.adaptive_histogram = adaptive_histogram
+        self.denoise = denoise
+        self.clahe_clip_limit = clahe_clip_limit
+        self.clahe_tile_size = clahe_tile_size
+
+
 class BiteMarkPreprocessor:
     """Preprocessor for bite mark images"""
     
     def __init__(self, img_size=(224, 224), grayscale=False, normalize=True, 
-                 adaptive_histogram=True, denoise=True):
+                 adaptive_histogram=True, denoise=True, config=None):
         """
         Initialize preprocessor
         
@@ -26,14 +40,27 @@ class BiteMarkPreprocessor:
             normalize: Normalize pixel values to [0, 1] if True
             adaptive_histogram: Apply CLAHE for better contrast
             denoise: Apply denoising filter
+            config: PreprocessingConfig object for shared settings
         """
-        self.img_size = img_size
-        self.grayscale = grayscale
-        self.normalize = normalize
-        self.adaptive_histogram = adaptive_histogram
-        self.denoise = denoise
-        # Only include classes that have data
-        self.class_names = ['human', 'dog', 'snake']  # Removed 'cat' (no data)
+        if config:
+            self.img_size = config.img_size
+            self.grayscale = config.grayscale
+            self.normalize = config.normalize
+            self.adaptive_histogram = config.adaptive_histogram
+            self.denoise = config.denoise
+            self.clahe_clip_limit = config.clahe_clip_limit
+            self.clahe_tile_size = config.clahe_tile_size
+        else:
+            self.img_size = img_size
+            self.grayscale = grayscale
+            self.normalize = normalize
+            self.adaptive_histogram = adaptive_histogram
+            self.denoise = denoise
+            self.clahe_clip_limit = 2.0
+            self.clahe_tile_size = (8, 8)
+        
+        # Auto-detect classes or use default
+        self.class_names = ['human', 'dog', 'snake']  # Default for backward compatibility
         
     def load_sample_data(self, data_dir='data/raw', save_processed=False, processed_dir='data/processed'):
         """
@@ -49,6 +76,14 @@ class BiteMarkPreprocessor:
         """
         images = []
         labels = []
+        
+        # Auto-detect classes from data directory
+        if os.path.exists(data_dir):
+            detected_classes = sorted([d for d in os.listdir(data_dir) 
+                                     if os.path.isdir(os.path.join(data_dir, d))])
+            if detected_classes:
+                self.class_names = detected_classes
+                print(f"📂 Auto-detected classes: {self.class_names}")
         
         # Check if data exists
         total_files = 0
@@ -125,12 +160,14 @@ class BiteMarkPreprocessor:
                 # Convert to LAB color space for better contrast enhancement
                 lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
                 l, a, b = cv2.split(lab)
-                clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+                clahe = cv2.createCLAHE(clipLimit=self.clahe_clip_limit, 
+                                       tileGridSize=self.clahe_tile_size)
                 l = clahe.apply(l)
                 img = cv2.merge([l, a, b])
                 img = cv2.cvtColor(img, cv2.COLOR_LAB2BGR)
             elif len(img.shape) == 2 or self.grayscale:
-                clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+                clahe = cv2.createCLAHE(clipLimit=self.clahe_clip_limit, 
+                                       tileGridSize=self.clahe_tile_size)
                 img = clahe.apply(img)
         
         # Resize with high-quality interpolation
@@ -172,23 +209,22 @@ class BiteMarkPreprocessor:
         """Create a synthetic bite mark pattern based on class"""
         img = np.ones((*self.img_size, 1 if self.grayscale else 3), dtype=np.float32) * 0.9
         
-        # Different patterns for different classes
-        if class_idx == 0:  # Human
-            # Rectangular bite pattern with individual teeth marks
+        # Different patterns for different classes (updated to match actual classes)
+        if class_idx == 0:  # human
             self._add_rectangular_bite(img, num_marks=12, spacing=15)
-        elif class_idx == 1:  # Cat
-            # Small, sharp puncture marks
+        elif class_idx == 1:  # dog  
             self._add_puncture_marks(img, num_marks=4, size=3)
-        elif class_idx == 2:  # Dog
-            # Larger bite with curved pattern
-            self._add_curved_bite(img, num_marks=10, spacing=20)
-        else:  # Snake
-            # Two fang marks
             self._add_fang_marks(img)
+        elif class_idx == 2:  # snake
+            self._add_fang_marks(img)
+            # Add some random texture for snake bites
+            noise = np.random.normal(0, 0.02, img.shape).astype(np.float32)
+            img = np.clip(img + noise, 0, 1)
         
-        # Add noise and variations
-        noise = np.random.normal(0, 0.05, img.shape)
-        img = np.clip(img + noise, 0, 1)
+        # Add general noise and variations
+        if class_idx != 2:  # Don't double-add noise for snake
+            noise = np.random.normal(0, 0.05, img.shape)
+            img = np.clip(img + noise, 0, 1)
         
         return img.astype(np.float32)
     
