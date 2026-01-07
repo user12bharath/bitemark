@@ -1,0 +1,56 @@
+nohup: ignoring input
+2026-01-07 20:38:42.350119: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-01-07 20:38:42.493515: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:42.493551: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2026-01-07 20:38:42.517896: E tensorflow/stream_executor/cuda/cuda_blas.cc:2981] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-01-07 20:38:43.028731: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:43.028809: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:43.028825: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2026-01-07 20:38:44,741 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:38:44,741 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:38:44.835307: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:980] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2026-01-07 20:38:44.838155: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:44.838250: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:44.838308: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:44.838358: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcufft.so.10'; dlerror: libcufft.so.10: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:44.838404: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcurand.so.10'; dlerror: libcurand.so.10: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:44.838462: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusolver.so.11'; dlerror: libcusolver.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:44.838504: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusparse.so.11'; dlerror: libcusparse.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:44.838548: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudnn.so.8'; dlerror: libcudnn.so.8: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /media/hangman/DATA/projects/bitemark1/bitemark/.venv/lib/python3.10/site-packages/cv2/../../lib64:
+2026-01-07 20:38:44.838562: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1934] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2026-01-07 20:38:44,838 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:38:44,838 - __main__ - INFO - GPU Available: False
+2026-01-07 20:38:44,838 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:38:44,838 - __main__ - INFO - Shared preprocessor initialized
+WARNING:tensorflow:Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:38:44,845 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:38:44.863622: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-01-07 20:38:45,040 - __main__ - INFO - Model loaded successfully: ../models/best_model.h5
+2026-01-07 20:38:45,040 - __main__ - INFO -    Input shape: (None, 224, 224, 3)
+2026-01-07 20:38:45,040 - __main__ - INFO -    Output shape: (None, 3)
+2026-01-07 20:38:45,040 - __main__ - INFO -    Total parameters: 31,752
+2026-01-07 20:38:45,040 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:38:45,041 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:38:45,041 - __main__ - INFO - API ready for requests!
+2026-01-07 20:38:45,041 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:38:45,041 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:38:45,041 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:38:45,041 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:38:45,041 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:38:45,041 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:38:45,041 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+ * Tip: There are .env or .flaskenv files present. Do "pip install python-dotenv" to use them.
+ * Serving Flask app 'app_enhanced'
+ * Debug mode: off
+2026-01-07 20:38:45,042 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-07 20:38:45,042 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

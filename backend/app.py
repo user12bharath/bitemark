@@ -22,7 +22,12 @@ from typing import Dict, Any, Optional, List
 
 import cv2
 import numpy as np
-import tensorflow as tf
+try:
+    import tensorflow as tf
+except Exception as e:
+    tf = None
+    import logging as _logging
+    _logging.getLogger(__name__).warning(f"TensorFlow import failed ({e}). Running in demo mode without TF.")
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
@@ -65,8 +70,8 @@ app.config.update({
 })
 
 # Global variables with proper initialization
-model: Optional[tf.keras.Model] = None
-preprocessor: Optional[SharedPreprocessor] = None
+model = None
+preprocessor = None
 class_names: List[str] = ['dog', 'human', 'snake']
 model_metrics: Dict[str, Any] = {}
 analysis_history: List[Dict[str, Any]] = []

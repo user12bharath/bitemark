@@ -1,0 +1,46 @@
+2026-01-07 20:13:14,348 - matplotlib.font_manager - INFO - Failed to extract font properties from /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf: Can not load face (unknown file format; error code 0x2)
+2026-01-07 20:13:14,650 - matplotlib.font_manager - INFO - generated new fontManager
+2026-01-07 20:13:15,521 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:13:15,522 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:13:15,619 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:13:15,619 - __main__ - INFO - GPU Available: False
+2026-01-07 20:13:15,619 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:13:15,619 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:13:15,619 - __main__ - ERROR - Model file not found: ../models/best_model.h5
+2026-01-07 20:13:15,619 - __main__ - WARNING - Metrics file not found: ../outputs/metrics.json
+2026-01-07 20:13:15,619 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:13:15,619 - __main__ - INFO - API ready for requests!
+2026-01-07 20:13:15,619 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:13:15,619 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:13:15,619 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:13:15,619 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:13:15,619 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:13:15,620 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:13:15,620 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:13:15,621 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-07 20:13:15,621 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-07 20:35:13,704 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:35:13,704 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:35:13,806 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:35:13,806 - __main__ - INFO - GPU Available: False
+2026-01-07 20:35:13,806 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:35:13,806 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:35:13,806 - __main__ - ERROR - Model file not found: ../models/best_model.h5
+2026-01-07 20:35:13,806 - __main__ - WARNING - Metrics file not found: ../outputs/metrics.json
+2026-01-07 20:35:13,806 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:35:13,806 - __main__ - INFO - API ready for requests!
+2026-01-07 20:35:13,806 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:35:13,806 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:35:13,806 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:35:13,806 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:35:13,806 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:35:13,806 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:35:13,806 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:35:13,807 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-07 20:35:13,807 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

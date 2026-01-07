@@ -1,0 +1,347 @@
+2026-01-07 20:15:08,844 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:15:08,844 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:15:08,941 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:15:08,941 - __main__ - INFO - GPU Available: False
+2026-01-07 20:15:08,941 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:15:08,941 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:15:08,948 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:15:09,158 - __main__ - ERROR - Model loading failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:15:09,158 - __main__ - INFO - Trying to load alternative model...
+2026-01-07 20:15:09,296 - __main__ - ERROR - Alternative model loading also failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:15:09,297 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:15:09,297 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:15:09,297 - __main__ - INFO - API ready for requests!
+2026-01-07 20:15:09,297 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:15:09,297 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:15:09,297 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:15:09,297 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:15:09,297 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:15:09,297 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:15:09,297 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:15:09,299 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-07 20:15:09,299 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-07 20:15:20,564 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:15:20] "GET /health HTTP/1.1" 200 -
+2026-01-07 20:36:03,218 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:36:03,218 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:36:03,318 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:36:03,318 - __main__ - INFO - GPU Available: False
+2026-01-07 20:36:03,319 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:36:03,319 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:36:03,330 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:36:03,541 - __main__ - ERROR - Model loading failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:36:03,541 - __main__ - INFO - Trying to load alternative model...
+2026-01-07 20:36:03,645 - __main__ - ERROR - Alternative model loading also failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:36:03,645 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:36:03,645 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:36:03,646 - __main__ - INFO - API ready for requests!
+2026-01-07 20:36:03,646 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:36:03,646 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:36:03,646 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:36:03,646 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:36:03,646 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:36:03,646 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:36:03,646 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:36:03,647 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-07 20:36:03,647 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-07 20:36:20,552 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:36:20,552 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:36:20,576 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:36:20,576 - __main__ - INFO - GPU Available: False
+2026-01-07 20:36:20,576 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:36:20,576 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:36:20,582 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:36:20,803 - __main__ - ERROR - Model loading failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:36:20,803 - __main__ - INFO - Trying to load alternative model...
+2026-01-07 20:36:20,948 - __main__ - ERROR - Alternative model loading also failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:36:20,948 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:36:20,948 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:36:20,948 - __main__ - INFO - API ready for requests!
+2026-01-07 20:36:20,948 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:36:20,948 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:36:20,949 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:36:20,949 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:36:20,949 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:36:20,949 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:36:20,949 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:36:58,141 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:36:58,141 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:36:58,173 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:36:58,173 - __main__ - INFO - GPU Available: False
+2026-01-07 20:36:58,173 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:36:58,173 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:36:58,184 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:36:58,451 - __main__ - ERROR - Model loading failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:36:58,451 - __main__ - INFO - Trying to load alternative model...
+2026-01-07 20:36:58,583 - __main__ - ERROR - Alternative model loading also failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:36:58,583 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:36:58,583 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:36:58,583 - __main__ - INFO - API ready for requests!
+2026-01-07 20:36:58,583 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:36:58,583 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:36:58,583 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:36:58,583 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:36:58,583 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:36:58,584 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:36:58,584 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:37:23,990 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:37:23,990 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:37:24,111 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:37:24,111 - __main__ - INFO - GPU Available: False
+2026-01-07 20:37:24,111 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:37:24,111 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:37:24,118 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:37:24,316 - __main__ - INFO - Model loaded successfully: ../models/best_model.h5
+2026-01-07 20:37:24,317 - __main__ - INFO -    Input shape: (None, 224, 224, 3)
+2026-01-07 20:37:24,317 - __main__ - INFO -    Output shape: (None, 3)
+2026-01-07 20:37:24,317 - __main__ - INFO -    Total parameters: 31,752
+2026-01-07 20:37:24,317 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:37:24,317 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:37:24,317 - __main__ - INFO - API ready for requests!
+2026-01-07 20:37:24,317 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:37:24,317 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:37:24,317 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:37:24,317 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:37:24,317 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:37:24,318 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:37:24,318 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:37:24,319 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-07 20:37:24,319 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-07 20:37:45,477 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:37:45,477 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:37:45,501 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:37:45,502 - __main__ - INFO - GPU Available: False
+2026-01-07 20:37:45,502 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:37:45,502 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:37:45,511 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:37:45,740 - __main__ - INFO - Model loaded successfully: ../models/best_model.h5
+2026-01-07 20:37:45,740 - __main__ - INFO -    Input shape: (None, 224, 224, 3)
+2026-01-07 20:37:45,741 - __main__ - INFO -    Output shape: (None, 3)
+2026-01-07 20:37:45,741 - __main__ - INFO -    Total parameters: 31,752
+2026-01-07 20:37:45,741 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:37:45,741 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:37:45,741 - __main__ - INFO - API ready for requests!
+2026-01-07 20:37:45,741 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:37:45,741 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:37:45,741 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:37:45,741 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:37:45,741 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:37:45,741 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:37:45,742 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:38:44,741 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:38:44,741 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:38:44,838 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:38:44,838 - __main__ - INFO - GPU Available: False
+2026-01-07 20:38:44,838 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:38:44,838 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:38:44,845 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:38:45,040 - __main__ - INFO - Model loaded successfully: ../models/best_model.h5
+2026-01-07 20:38:45,040 - __main__ - INFO -    Input shape: (None, 224, 224, 3)
+2026-01-07 20:38:45,040 - __main__ - INFO -    Output shape: (None, 3)
+2026-01-07 20:38:45,040 - __main__ - INFO -    Total parameters: 31,752
+2026-01-07 20:38:45,040 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:38:45,041 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:38:45,041 - __main__ - INFO - API ready for requests!
+2026-01-07 20:38:45,041 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:38:45,041 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:38:45,041 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:38:45,041 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:38:45,041 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:38:45,041 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:38:45,041 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:38:45,042 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-07 20:38:45,042 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-07 20:41:49,975 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:41:49,976 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:41:49,999 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:41:49,999 - __main__ - INFO - GPU Available: False
+2026-01-07 20:41:50,000 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:41:50,000 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:41:50,009 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:41:50,258 - __main__ - INFO - Model loaded successfully: ../models/best_model.h5
+2026-01-07 20:41:50,258 - __main__ - INFO -    Input shape: (None, 224, 224, 3)
+2026-01-07 20:41:50,258 - __main__ - INFO -    Output shape: (None, 3)
+2026-01-07 20:41:50,259 - __main__ - INFO -    Total parameters: 31,752
+2026-01-07 20:41:50,259 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:41:50,259 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:41:50,259 - __main__ - INFO - API ready for requests!
+2026-01-07 20:41:50,259 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:41:50,259 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:41:50,259 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:41:50,259 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:41:50,259 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:41:50,259 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:41:50,259 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:42:20,984 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:42:20,984 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:42:21,010 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:42:21,010 - __main__ - INFO - GPU Available: False
+2026-01-07 20:42:21,010 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:42:21,010 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:42:21,019 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:42:21,245 - __main__ - ERROR - Model loading failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:42:21,245 - __main__ - INFO - Trying to load alternative model...
+2026-01-07 20:42:21,376 - __main__ - ERROR - Alternative model loading also failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:42:21,377 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:42:21,377 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:42:21,377 - __main__ - INFO - API ready for requests!
+2026-01-07 20:42:21,377 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:42:21,377 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:42:21,378 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:42:21,378 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:42:21,378 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:42:21,378 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:42:21,378 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:44:30,605 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:44:30,605 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:44:30,629 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:44:30,629 - __main__ - INFO - GPU Available: False
+2026-01-07 20:44:30,629 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:44:30,629 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:44:30,638 - tensorflow - WARNING - Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+2026-01-07 20:44:30,853 - __main__ - ERROR - Model loading failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:44:30,853 - __main__ - INFO - Trying to load alternative model...
+2026-01-07 20:44:30,966 - __main__ - ERROR - Alternative model loading also failed: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+2026-01-07 20:44:30,966 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:44:30,966 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:44:30,966 - __main__ - INFO - API ready for requests!
+2026-01-07 20:44:30,966 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:44:30,966 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:44:30,967 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:44:30,967 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:44:30,967 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:44:30,967 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:44:30,967 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:46:54,042 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:46:54,042 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:46:54,072 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:46:54,072 - __main__ - INFO - GPU Available: False
+2026-01-07 20:46:54,072 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:46:54,072 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:46:54,076 - __main__ - ERROR - Model loading failed: 'str' object has no attribute 'quantization_mode'
+2026-01-07 20:46:54,076 - __main__ - INFO - Trying to load alternative model...
+2026-01-07 20:46:54,239 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 20:46:54,244 - absl - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2026-01-07 20:46:54,244 - __main__ - INFO - Alternative model loaded: ../models/best_model_enhanced.h5
+2026-01-07 20:46:54,245 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:46:54,245 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:46:54,245 - __main__ - INFO - API ready for requests!
+2026-01-07 20:46:54,245 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:46:54,245 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:46:54,245 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:46:54,245 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:46:54,245 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:46:54,245 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:46:54,245 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:48:09,090 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:48:09,091 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:48:09,190 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:48:09,190 - __main__ - INFO - GPU Available: False
+2026-01-07 20:48:09,190 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:48:09,190 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:48:09,193 - __main__ - ERROR - Model loading failed: 'str' object has no attribute 'quantization_mode'
+2026-01-07 20:48:09,193 - __main__ - INFO - Trying to load alternative model...
+2026-01-07 20:48:09,369 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 20:48:09,374 - absl - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2026-01-07 20:48:09,375 - __main__ - INFO - Alternative model loaded: ../models/best_model_enhanced.h5
+2026-01-07 20:48:09,375 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:48:09,375 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:48:09,375 - __main__ - INFO - API ready for requests!
+2026-01-07 20:48:09,375 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:48:09,376 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:48:09,376 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:48:09,376 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:48:09,376 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:48:09,376 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:48:09,376 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:48:09,377 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-07 20:48:09,377 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-07 20:49:13,383 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-07 20:49:13,383 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-07 20:49:13,488 - global_utils - WARNING - No GPU found, using CPU
+2026-01-07 20:49:13,489 - __main__ - INFO - GPU Available: False
+2026-01-07 20:49:13,489 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-07 20:49:13,489 - __main__ - INFO - Shared preprocessor initialized
+2026-01-07 20:49:13,492 - __main__ - ERROR - Model loading failed: 'str' object has no attribute 'quantization_mode'
+2026-01-07 20:49:13,492 - __main__ - INFO - Trying to load alternative model...
+2026-01-07 20:49:13,677 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 20:49:13,682 - absl - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2026-01-07 20:49:13,682 - __main__ - INFO - Alternative model loaded: ../models/best_model_enhanced.h5
+2026-01-07 20:49:13,683 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-07 20:49:13,683 - __main__ - INFO - API initialization completed successfully!
+2026-01-07 20:49:13,683 - __main__ - INFO - API ready for requests!
+2026-01-07 20:49:13,683 - __main__ - INFO -    Available endpoints:
+2026-01-07 20:49:13,683 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-07 20:49:13,683 - __main__ - INFO -    - GET /health - Health check
+2026-01-07 20:49:13,683 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-07 20:49:13,683 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-07 20:49:13,683 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-07 20:49:13,683 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-07 20:49:13,684 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-07 20:49:13,684 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-07 20:50:17,639 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:17] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-07 20:50:17,640 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:17] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-07 20:50:17,641 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:17] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-07 20:50:17,643 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:17] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-07 20:50:22,118 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:22] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-07 20:50:22,120 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:22] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-07 20:50:22,122 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:22] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-07 20:50:22,125 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:22] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-07 20:50:27,098 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:27] "GET /analytics/history HTTP/1.1" 200 -
+2026-01-07 20:50:27,099 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:27] "GET /analytics/history HTTP/1.1" 200 -
+2026-01-07 20:50:27,887 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:27] "GET /model/info HTTP/1.1" 200 -
+2026-01-07 20:50:27,889 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:27] "GET /model/info HTTP/1.1" 200 -
+2026-01-07 20:50:30,133 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:30] "GET /health HTTP/1.1" 200 -
+2026-01-07 20:50:30,134 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:30] "GET /model/info HTTP/1.1" 200 -
+2026-01-07 20:50:30,136 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:30] "GET /health HTTP/1.1" 200 -
+2026-01-07 20:50:30,138 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:30] "GET /model/info HTTP/1.1" 200 -
+2026-01-07 20:50:32,307 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:32] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-07 20:50:32,308 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:32] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-07 20:50:32,310 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:32] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-07 20:50:32,311 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:50:32] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-07 20:51:20,830 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:51:20] "GET /health HTTP/1.1" 200 -
+2026-01-07 20:52:50,938 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:50] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-07 20:52:50,939 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:50] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-07 20:52:50,940 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:50] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-07 20:52:50,941 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:50] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-07 20:52:52,572 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:52] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-07 20:52:52,573 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:52] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-07 20:52:52,575 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:52] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-07 20:52:52,576 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:52] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
