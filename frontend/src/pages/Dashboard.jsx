@@ -37,7 +37,7 @@ function Dashboard() {
       const transformedStats = {
         totalAnalyses: backendStats.api_stats?.total_predictions || 0,
         todayAnalyses: backendStats.api_stats?.successful_predictions || 0,
-        accuracy: parseFloat(((backendStats.model_performance?.test_accuracy || 0) * 100).toFixed(2)),
+        accuracy: parseFloat((backendStats.model_performance?.test_accuracy || 0).toFixed(2)),
         avgProcessingTime: backendStats.predictions_per_hour || 0,
         successRate: backendStats.success_rate || 0,
         uptime: backendStats.uptime_hours || 0

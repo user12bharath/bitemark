@@ -1,0 +1,18 @@
+{
+    "config": {
+        "img_size": [
+            224,
+            224
+        ],
+        "batch_size": 8,
+        "epochs": 16,
+        "learning_rate": 0.001,
+        "augmentation_factor": 2
+    },
+    "samples": {
+        "train": 641,
+        "val": 35,
+        "test": 70
+    },
+    "training_time": 205.95727491378784
+}

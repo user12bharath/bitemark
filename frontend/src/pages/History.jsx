@@ -62,6 +62,64 @@ function History() {
     }
   }
 
+  const handleDownload = (analysis) => {
+    try {
+      const data = {
+        filename: analysis.filename,
+        prediction: analysis.prediction,
+        confidence: analysis.confidence,
+        timestamp: analysis.timestamp,
+        id: analysis.id,
+        full_prediction: analysis.originalPrediction
+      }
+      
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `analysis_${analysis.filename.replace(/\.[^/.]+$/, '')}_${analysis.id}.json`
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+      URL.revokeObjectURL(url)
+      
+      toast.success('Analysis downloaded successfully')
+    } catch (error) {
+      toast.error('Failed to download analysis')
+    }
+  }
+
+  const handleExportAll = () => {
+    try {
+      const exportData = {
+        export_date: new Date().toISOString(),
+        total_analyses: filteredAnalyses.length,
+        analyses: filteredAnalyses.map(analysis => ({
+          filename: analysis.filename,
+          prediction: analysis.prediction,
+          confidence: analysis.confidence,
+          timestamp: analysis.timestamp,
+          id: analysis.id,
+          full_prediction: analysis.originalPrediction
+        }))
+      }
+      
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `bitemark_analysis_export_${new Date().toISOString().split('T')[0]}.json`
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+      URL.revokeObjectURL(url)
+      
+      toast.success(`Exported ${filteredAnalyses.length} analyses successfully`)
+    } catch (error) {
+      toast.error('Failed to export analyses')
+    }
+  }
+
   const filteredAnalyses = analyses.filter(analysis => {
     const matchesSearch = analysis.filename.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesFilter = filterClass === 'all' || analysis.prediction?.toLowerCase() === filterClass.toLowerCase()
@@ -90,7 +148,10 @@ function History() {
           <h1 className="text-3xl font-bold text-gray-900">Analysis History</h1>
           <p className="text-gray-500 mt-1">{analyses.length} total analyses</p>
         </div>
-        <button className="btn-primary flex items-center gap-2">
+        <button 
+          onClick={handleExportAll}
+          className="btn-primary flex items-center gap-2"
+        >
           <Download className="w-4 h-4" />
           Export All
         </button>
@@ -203,6 +264,7 @@ function History() {
                           <Eye className="w-4 h-4" />
                         </button>
                         <button
+                          onClick={() => handleDownload(analysis)}
                           className="p-2 text-green-600 hover:bg-green-50 rounded-lg transition-colors"
                           title="Download"
                         >

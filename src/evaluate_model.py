@@ -366,7 +366,8 @@ def main():
     # Load data
     print_section_header("LOADING TEST DATA")
     preprocessor = BiteMarkPreprocessor(img_size=IMG_SIZE, grayscale=GRAYSCALE)
-    images, labels, class_names = preprocessor.load_sample_data()
+    # Load augmented data instead of raw data
+    images, labels, class_names = preprocessor.load_sample_data(data_dir='../data/augmented')
     
     # Split data (same as training)
     X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.split_data(

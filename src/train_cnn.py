@@ -329,7 +329,8 @@ def main():
         denoise=True
     )
     preprocessor = BiteMarkPreprocessor(config=prep_config)
-    images, labels, class_names = preprocessor.load_sample_data()
+    # Load augmented data instead of raw data
+    images, labels, class_names = preprocessor.load_sample_data(data_dir='../data/augmented')
     
     # Step 2: Split data
     X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.split_data(

@@ -62,12 +62,12 @@ class BiteMarkPreprocessor:
         # Auto-detect classes or use default
         self.class_names = ['human', 'dog', 'snake']  # Default for backward compatibility
         
-    def load_sample_data(self, data_dir='data/raw', save_processed=False, processed_dir='data/processed'):
+    def load_sample_data(self, data_dir='data/augmented', save_processed=False, processed_dir='data/processed'):
         """
         Load sample data or create synthetic data if no real data exists
         
         Args:
-            data_dir: Directory containing class folders
+            data_dir: Directory containing class folders (defaults to augmented data)
             save_processed: If True, save preprocessed images to disk
             processed_dir: Directory to save processed images
             
@@ -374,9 +374,10 @@ class BiteMarkPreprocessor:
 def main():
     """Test preprocessing module"""
     print("🔧 Testing Data Preprocessing Module...")
+    print("📂 Loading augmented data from data/augmented...")
     
     preprocessor = BiteMarkPreprocessor(img_size=(224, 224), grayscale=True)
-    images, labels, class_names = preprocessor.load_sample_data()
+    images, labels, class_names = preprocessor.load_sample_data(data_dir='../data/augmented')
     
     print(f"\n✓ Loaded {len(images)} images")
     print(f"  Image shape: {images[0].shape}")

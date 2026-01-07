@@ -1,11 +1,13 @@
 import { useState, useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useDropzone } from 'react-dropzone'
-import { Upload, Image as ImageIcon, X, CheckCircle, Loader, Info } from 'lucide-react'
+import { Upload, Image as ImageIcon, X, CheckCircle, Loader, Info, Eye } from 'lucide-react'
 import { toast } from 'react-toastify'
 import { analysisAPI } from '../services/api'
 
 function Analysis() {
+  const navigate = useNavigate()
   const [selectedImage, setSelectedImage] = useState(null)
   const [preview, setPreview] = useState(null)
   const [analyzing, setAnalyzing] = useState(false)
@@ -91,6 +93,16 @@ function Analysis() {
     setSelectedImage(null)
     setPreview(null)
     setResult(null)
+  }
+
+  const handleDetailedAnalysis = () => {
+    if (result) {
+      navigate('/detailed-analysis', {
+        state: {
+          imageData: result
+        }
+      })
+    }
   }
 
   const getConfidenceColor = (confidence) => {
@@ -290,8 +302,12 @@ function Analysis() {
                 <button onClick={handleReset} className="btn-secondary flex-1">
                   Analyze Another
                 </button>
-                <button className="btn-primary flex-1">
-                  Save Result
+                <button 
+                  onClick={handleDetailedAnalysis}
+                  className="btn-primary flex-1 flex items-center justify-center gap-2"
+                >
+                  <Eye className="w-4 h-4" />
+                  Detailed Analysis
                 </button>
               </div>
             </>

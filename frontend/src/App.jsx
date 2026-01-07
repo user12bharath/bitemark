@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import Dashboard from './pages/Dashboard'
 import Analysis from './pages/Analysis'
+import DetailedAnalysis from './pages/DetailedAnalysis'
 import History from './pages/History'
 import ModelMetrics from './pages/ModelMetrics'
 import Settings from './pages/Settings'
@@ -38,6 +39,7 @@ function App() {
         >
           <Route index element={<Dashboard />} />
           <Route path="analysis" element={<Analysis />} />
+          <Route path="detailed-analysis" element={<DetailedAnalysis />} />
           <Route path="history" element={<History />} />
           <Route path="metrics" element={<ModelMetrics />} />
           <Route path="settings" element={<Settings />} />

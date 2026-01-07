@@ -77,13 +77,7 @@ api_stats: Dict[str, Any] = {
     'start_time': datetime.now().isoformat(),
     'model_loaded_time': None
 }
-except Exception as e:
-    print(f"⚠️  Warning: Could not load model - {e}")
-    print("   Running in DEMO mode with mock predictions")
-    model = None
 
-# Class labels (matching the training order)
-CLASS_LABELS = ['human', 'dog', 'snake']  # Model class labels (cat removed - no data)
 
 # Mock data storage (in production, use a database)
 analyses_db = []

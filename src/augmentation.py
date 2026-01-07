@@ -471,8 +471,146 @@ class BiteMarkAugmentor:
         return data_augmentation
 
 
+def load_raw_data(raw_dir='data/raw', img_size=(224, 224)):
+    """
+    Load raw images from directory structure
+    
+    Args:
+        raw_dir: Path to raw data directory
+        img_size: Target image size (height, width)
+        
+    Returns:
+        images: NumPy array of images
+        labels: NumPy array of labels
+        class_names: List of class names
+    """
+    print(f"\n📂 Loading raw data from {raw_dir}...")
+    
+    images = []
+    labels = []
+    class_names = []
+    
+    # Get class directories
+    if not os.path.exists(raw_dir):
+        print(f"❌ Error: Directory {raw_dir} does not exist!")
+        return None, None, None
+    
+    class_dirs = sorted([d for d in os.listdir(raw_dir) 
+                        if os.path.isdir(os.path.join(raw_dir, d))])
+    
+    if not class_dirs:
+        print(f"❌ Error: No class directories found in {raw_dir}!")
+        return None, None, None
+    
+    print(f"  Found {len(class_dirs)} classes: {', '.join(class_dirs)}")
+    
+    for label, class_name in enumerate(class_dirs):
+        class_names.append(class_name)
+        class_dir = os.path.join(raw_dir, class_name)
+        
+        # Get all image files
+        image_files = [f for f in os.listdir(class_dir) 
+                      if f.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp'))]
+        
+        print(f"  Loading {len(image_files)} images from {class_name}...")
+        
+        for img_file in image_files:
+            img_path = os.path.join(class_dir, img_file)
+            
+            # Load image
+            img = cv2.imread(img_path)
+            if img is None:
+                print(f"    ⚠ Warning: Could not load {img_path}")
+                continue
+            
+            # Convert BGR to RGB if color image
+            if len(img.shape) == 3 and img.shape[2] == 3:
+                img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            
+            # Resize to target size
+            img = cv2.resize(img, img_size)
+            
+            # Normalize to [0, 1]
+            img = img.astype(np.float32) / 255.0
+            
+            # Ensure consistent shape (add channel dimension if grayscale)
+            if len(img.shape) == 2:
+                img = img[..., np.newaxis]
+            
+            images.append(img)
+            labels.append(label)
+    
+    images = np.array(images, dtype=np.float32)
+    labels = np.array(labels, dtype=np.int32)
+    
+    print(f"\n✓ Loaded {len(images)} images across {len(class_names)} classes")
+    
+    # Print class distribution
+    unique_labels, counts = np.unique(labels, return_counts=True)
+    for label, count in zip(unique_labels, counts):
+        print(f"    {class_names[label]}: {count} images")
+    
+    return images, labels, class_names
+
+
 def main():
-    """Test augmentation module"""
+    """Load raw data, augment it, and save to augmented directory"""
+    print("🔧 Bite Mark Data Augmentation Pipeline")
+    print("=" * 60)
+    
+    # Configuration
+    RAW_DIR = '../data/raw'
+    AUGMENTED_DIR = '../data/augmented'
+    IMG_SIZE = (224, 224)
+    AUGMENTATION_FACTOR = 3
+    
+    # Load raw data
+    images, labels, class_names = load_raw_data(RAW_DIR, img_size=IMG_SIZE)
+    
+    if images is None:
+        print("\n❌ Failed to load raw data. Exiting.")
+        return
+    
+    # Configure augmentation
+    config = AugmentationConfig()
+    # You can customize config here for specific requirements
+    # config.disable_vertical_flip = True  # Uncomment for human bites
+    
+    # Create augmentor with class balancing
+    augmentor = BiteMarkAugmentor(
+        preserve_features=True,
+        balance_classes=True,
+        config=config
+    )
+    
+    # Augment dataset and save to disk
+    print(f"\n{'='*60}")
+    print("🎨 Starting Augmentation Process")
+    print(f"{'='*60}")
+    
+    aug_images, aug_labels = augmentor.augment_dataset(
+        images=images,
+        labels=labels,
+        augmentation_factor=AUGMENTATION_FACTOR,
+        class_names=class_names,
+        save_augmented=True,
+        augmented_dir=AUGMENTED_DIR
+    )
+    
+    # Summary
+    print(f"\n{'='*60}")
+    print("📊 Augmentation Summary")
+    print(f"{'='*60}")
+    print(f"  Original images: {len(images)}")
+    print(f"  Augmented images: {len(aug_images)}")
+    print(f"  Total augmented files saved: {len(aug_images) - len(images)}")
+    print(f"  Augmentation factor: {AUGMENTATION_FACTOR}x")
+    print(f"  Output directory: {AUGMENTED_DIR}")
+    print(f"\n✅ Augmentation pipeline completed successfully!")
+
+
+def test_augmentation():
+    """Test augmentation module with synthetic data"""
     print("🔧 Testing Data Augmentation Module...")
     
     # Create sample image
@@ -488,22 +626,21 @@ def main():
     augmented = augmentor.apply_random_augmentation(sample_image)
     print(f"✓ Single augmentation: {sample_image.shape} → {augmented.shape}")
     
-    # Test TensorFlow pipeline
-    tf_augment_fn = augmentor.get_tf_augmentation_function()
-    tf_sample = tf.convert_to_tensor(sample_image)
-    tf_label = tf.convert_to_tensor([0])
-    tf_augmented, _ = tf_augment_fn(tf_sample, tf_label)
-    print(f"✓ TensorFlow augmentation: {tf_sample.shape} → {tf_augmented.shape}")
+    # Test TensorFlow pipeline creation
+    tf_pipeline = augmentor.create_augmentation_pipeline()
+    print(f"✓ TensorFlow augmentation pipeline created: {tf_pipeline.name}")
     
     # Test batch augmentation
     sample_images = np.random.rand(10, 224, 224, 1).astype(np.float32)
     sample_labels = np.array([0, 1, 2, 0, 1, 2, 0, 1, 2, 0])
     
     aug_images, aug_labels = augmentor.augment_dataset(
-        sample_images, sample_labels, augmentation_factor=3
+        sample_images, sample_labels, augmentation_factor=3,
+        class_names=['dog', 'human', 'snake']
     )
     
     print(f"✓ Batch augmentation: {len(sample_images)} → {len(aug_images)} samples")
+    print(f"\n✅ All tests passed successfully!")
 
 
 if __name__ == "__main__":
