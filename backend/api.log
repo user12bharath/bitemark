@@ -345,3 +345,146 @@ If you will use compatible GPU(s) not attached to this host, e.g. by running a m
 2026-01-07 20:52:52,573 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:52] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
 2026-01-07 20:52:52,575 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:52] "GET /analytics/stats HTTP/1.1" 200 -
 2026-01-07 20:52:52,576 - werkzeug - INFO - 127.0.0.1 - - [07/Jan/2026 20:52:52] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-08 11:57:19,160 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-08 11:57:19,160 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-08 11:57:19,271 - global_utils - WARNING - No GPU found, using CPU
+2026-01-08 11:57:19,271 - __main__ - INFO - GPU Available: False
+2026-01-08 11:57:19,272 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-08 11:57:19,272 - __main__ - INFO - Shared preprocessor initialized
+2026-01-08 11:57:19,277 - __main__ - ERROR - Model loading failed: 'str' object has no attribute 'quantization_mode'
+2026-01-08 11:57:19,277 - __main__ - INFO - Trying to load alternative model...
+2026-01-08 11:57:19,618 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-08 11:57:19,623 - absl - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2026-01-08 11:57:19,624 - __main__ - INFO - Alternative model loaded: ../models/best_model_enhanced.h5
+2026-01-08 11:57:19,624 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-08 11:57:19,624 - __main__ - INFO - API initialization completed successfully!
+2026-01-08 11:57:19,624 - __main__ - INFO - API ready for requests!
+2026-01-08 11:57:19,624 - __main__ - INFO -    Available endpoints:
+2026-01-08 11:57:19,625 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-08 11:57:19,625 - __main__ - INFO -    - GET /health - Health check
+2026-01-08 11:57:19,625 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-08 11:57:19,625 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-08 11:57:19,625 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-08 11:57:19,625 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-08 11:57:19,626 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.126:5000
+2026-01-08 11:57:19,626 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-08 11:57:44,641 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 11:57:44] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-08 11:57:44,644 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 11:57:44] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-08 11:57:44,648 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 11:57:44] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-08 11:57:44,652 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 11:57:44] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-08 11:58:25,705 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2026-01-08 11:58:25,895 - __main__ - INFO - Prediction logged: 4a5219b0-97a5-4e07-8e2f-abad15bde933
+2026-01-08 11:58:25,896 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 11:58:25] "POST /predict HTTP/1.1" 200 -
+2026-01-08 12:03:40,857 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 12:03:40] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-08 12:03:40,858 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 12:03:40] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-08 12:03:40,859 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 12:03:40] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-08 12:03:40,860 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 12:03:40] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-08 12:03:48,925 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 12:03:48] "GET /model/info HTTP/1.1" 200 -
+2026-01-08 12:03:48,927 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 12:03:48] "GET /model/info HTTP/1.1" 200 -
+2026-01-08 14:50:20,118 - __main__ - ERROR - Critical import error: No module named 'matplotlib'
+2026-01-08 14:50:20,127 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-08 14:50:20,128 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-08 14:50:20,128 - __main__ - ERROR - SharedPreprocessor not available - using fallback
+2026-01-08 14:50:20,131 - __main__ - ERROR - Model loading failed: 'str' object has no attribute 'quantization_mode'
+2026-01-08 14:50:20,131 - __main__ - INFO - Trying to load alternative model...
+2026-01-08 14:50:20,141 - __main__ - ERROR - Alternative model loading also failed: Unknown layer: 'AttentionModule'. Please ensure you are using a `keras.utils.custom_object_scope` and that this object is included in the scope. See https://www.tensorflow.org/guide/keras/save_and_serialize#registering_the_custom_object for details.
+2026-01-08 14:50:20,143 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-08 14:50:20,143 - __main__ - INFO - API initialization completed successfully!
+2026-01-08 14:50:20,143 - __main__ - INFO - API ready for requests!
+2026-01-08 14:50:20,143 - __main__ - INFO -    Available endpoints:
+2026-01-08 14:50:20,143 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-08 14:50:20,143 - __main__ - INFO -    - GET /health - Health check
+2026-01-08 14:50:20,144 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-08 14:50:20,144 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-08 14:50:20,144 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-08 14:50:20,144 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-08 14:50:20,148 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-08 14:50:20,149 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-08 14:51:44,373 - __main__ - ERROR - Critical import error: No module named 'matplotlib'
+2026-01-08 14:51:44,376 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-08 14:51:44,376 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-08 14:51:44,376 - __main__ - ERROR - SharedPreprocessor not available - using fallback
+2026-01-08 14:51:44,379 - __main__ - ERROR - Model loading failed: 'str' object has no attribute 'quantization_mode'
+2026-01-08 14:51:44,380 - __main__ - INFO - Trying to load alternative model...
+2026-01-08 14:51:44,390 - __main__ - ERROR - Alternative model loading also failed: Unknown layer: 'AttentionModule'. Please ensure you are using a `keras.utils.custom_object_scope` and that this object is included in the scope. See https://www.tensorflow.org/guide/keras/save_and_serialize#registering_the_custom_object for details.
+2026-01-08 14:51:44,390 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-08 14:51:44,390 - __main__ - INFO - API initialization completed successfully!
+2026-01-08 14:51:44,391 - __main__ - INFO - API ready for requests!
+2026-01-08 14:51:44,391 - __main__ - INFO -    Available endpoints:
+2026-01-08 14:51:44,391 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-08 14:51:44,391 - __main__ - INFO -    - GET /health - Health check
+2026-01-08 14:51:44,391 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-08 14:51:44,391 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-08 14:51:44,392 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-08 14:51:44,392 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-08 14:51:44,396 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-08 14:51:44,396 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-08 14:53:19,610 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:53:19] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-08 14:53:19,611 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:53:19] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-08 14:53:19,612 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:53:19] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-08 14:53:19,613 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:53:19] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-08 14:53:24,384 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:53:24] "GET /analytics/history HTTP/1.1" 200 -
+2026-01-08 14:53:24,386 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:53:24] "GET /analytics/history HTTP/1.1" 200 -
+2026-01-08 14:53:25,606 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:53:25] "[35m[1mGET /model/info HTTP/1.1[0m" 503 -
+2026-01-08 14:53:25,608 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:53:25] "[35m[1mGET /model/info HTTP/1.1[0m" 503 -
+2026-01-08 14:53:45,210 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:53:45] "[35m[1mGET /model/info HTTP/1.1[0m" 503 -
+2026-01-08 14:54:05,251 - __main__ - INFO - Starting Enhanced BiteMark Classification API...
+2026-01-08 14:54:05,251 - __main__ - INFO - Initializing Enhanced BiteMark API...
+2026-01-08 14:54:05,345 - global_utils - WARNING - No GPU found, using CPU
+2026-01-08 14:54:05,346 - __main__ - INFO - GPU Available: False
+2026-01-08 14:54:05,346 - shared_preprocessing - INFO - SharedPreprocessor initialized with config: {'img_size': (224, 224), 'channels': 3, 'normalize': True, 'adaptive_histogram': True, 'denoise': True, 'clahe_clip_limit': 2.0, 'clahe_grid_size': (8, 8), 'denoise_strength': 10, 'preserve_aspect_ratio': False}
+2026-01-08 14:54:05,346 - __main__ - INFO - Shared preprocessor initialized
+2026-01-08 14:54:05,349 - __main__ - ERROR - Model loading failed: 'str' object has no attribute 'quantization_mode'
+2026-01-08 14:54:05,349 - __main__ - INFO - Trying to load alternative model...
+2026-01-08 14:54:05,498 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-08 14:54:05,502 - absl - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2026-01-08 14:54:05,503 - __main__ - INFO - Alternative model loaded: ../models/best_model_enhanced.h5
+2026-01-08 14:54:05,503 - __main__ - INFO - Model metrics loaded: 18 metrics
+2026-01-08 14:54:05,504 - __main__ - INFO - API initialization completed successfully!
+2026-01-08 14:54:05,504 - __main__ - INFO - API ready for requests!
+2026-01-08 14:54:05,504 - __main__ - INFO -    Available endpoints:
+2026-01-08 14:54:05,504 - __main__ - INFO -    - POST /predict - Make predictions
+2026-01-08 14:54:05,504 - __main__ - INFO -    - GET /health - Health check
+2026-01-08 14:54:05,504 - __main__ - INFO -    - GET /model/info - Model information
+2026-01-08 14:54:05,504 - __main__ - INFO -    - GET /analytics/stats - Usage analytics
+2026-01-08 14:54:05,504 - __main__ - INFO -    - GET /analytics/history - Prediction history
+2026-01-08 14:54:05,504 - __main__ - INFO -    - DELETE /analytics/history/<id> - Delete analysis
+2026-01-08 14:54:05,506 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.87.64.68:5000
+2026-01-08 14:54:05,506 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-08 14:54:09,039 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:09] "GET /model/info HTTP/1.1" 200 -
+2026-01-08 14:54:11,853 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:11] "GET /model/info HTTP/1.1" 200 -
+2026-01-08 14:54:11,854 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:11] "GET /health HTTP/1.1" 200 -
+2026-01-08 14:54:11,855 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:11] "GET /model/info HTTP/1.1" 200 -
+2026-01-08 14:54:11,857 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:11] "GET /health HTTP/1.1" 200 -
+2026-01-08 14:54:14,351 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:14] "GET /analytics/history HTTP/1.1" 200 -
+2026-01-08 14:54:14,352 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:14] "GET /analytics/history HTTP/1.1" 200 -
+2026-01-08 14:54:17,836 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:17] "GET /model/info HTTP/1.1" 200 -
+2026-01-08 14:54:17,837 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:17] "GET /model/info HTTP/1.1" 200 -
+2026-01-08 14:54:20,232 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:20] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-08 14:54:20,233 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:20] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-08 14:54:20,234 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:20] "GET /analytics/stats HTTP/1.1" 200 -
+2026-01-08 14:54:20,235 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:20] "GET /analytics/history?limit=5 HTTP/1.1" 200 -
+2026-01-08 14:54:31,622 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2026-01-08 14:54:31,793 - __main__ - INFO - Prediction logged: dc6ae17e-620e-4502-bfda-3aa1c4e88a18
+2026-01-08 14:54:31,794 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:31] "POST /predict HTTP/1.1" 200 -
+2026-01-08 14:54:35,402 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2026-01-08 14:54:35,467 - __main__ - INFO - Prediction logged: 27bea86f-6b6f-4f41-a707-c5f05ed243c8
+2026-01-08 14:54:35,468 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:35] "POST /predict HTTP/1.1" 200 -
+2026-01-08 14:54:50,287 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2026-01-08 14:54:50,352 - __main__ - INFO - Prediction logged: 7cf6ee44-ff2d-4ae0-818b-287162e03213
+2026-01-08 14:54:50,353 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:54:50] "POST /predict HTTP/1.1" 200 -
+2026-01-08 14:55:05,526 - __main__ - INFO - Image preprocessed with SharedPreprocessor: (1, 224, 224, 3)
+2026-01-08 14:55:05,594 - __main__ - INFO - Prediction logged: e39ff066-0ac5-4e64-823f-984372a45863
+2026-01-08 14:55:05,595 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2026 14:55:05] "POST /predict HTTP/1.1" 200 -
